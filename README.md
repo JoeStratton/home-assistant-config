@@ -1,7 +1,7 @@
 <!-- <p align="center">
   <img src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/xxxxx.png" width="250"/>
 </p> -->
-<h1 align="center">unJoe Smart Home Configuration</h1>
+<h1 align="center">WIP - NOT ACCURATE - unJoe Smart Home Configuration</h1>
 <h3 align="center">Home Assistant Configuration &amp; Documentation for my Smart House.</h3>
 <p align="center">Be sure to :star: my repo!</p>
 <p align="center">
