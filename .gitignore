@@ -1,0 +1,13 @@
+.storage
+deps
+tts
+.august.conf
+videos
+.google.token
+.ring_cache.pickle
+alexa_media.j123ss@gmail.com.pickle
+google_calendars.yaml
+home-assistant.log
+home-assistant_v2.db
+secrets.yaml
+**/__pycache__

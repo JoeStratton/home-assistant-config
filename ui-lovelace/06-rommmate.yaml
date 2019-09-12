@@ -1,0 +1,39 @@
+title: !secret user3
+path: !secret user3_lower
+icon: 'mdi:home-floor-b'
+cards:
+  - entities:
+     - entity: !secret roommate_light
+    show_header_toggle: false
+    title: ''
+    type: entities    
+  - entities:
+      - type: custom:fold-entity-row
+        head: light.hue_color_lamp_1
+        label: 'Hue Lamp'
+        entities:
+          - type: custom:light-entity-row
+            entity: light.hue_color_lamp_1
+            name: ' '
+            showColorSliders: true
+      - type: custom:fold-entity-row
+        head: light.bedbloom
+        label: 'Bed Bloom'
+        entities:
+          - type: custom:light-entity-row
+            entity: light.bedbloom
+            name: ' '
+            showColorSliders: true
+        showColorSliders: true
+      - type: custom:fold-entity-row
+        head: light.deskbloom
+        label: 'Desk Bloom'
+        entities:
+          - type: custom:light-entity-row
+            entity: light.deskbloom
+            name: ' '
+            showColorSliders: true
+        showColorSliders: true
+    title: ''
+    show_header_toggle: false
+    type: entities

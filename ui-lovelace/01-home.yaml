@@ -1,0 +1,46 @@
+title: Home
+icon: mdi:home
+panel: false
+path: default_view
+background: var(--background-image)
+cards:
+  - entities:
+      - entity: lock.front_door
+      - entity: cover.garage_door
+    show_header_toggle: false
+    type: entities
+  - type: 'custom:simple-thermostat'
+    entity: climate.upstairs
+    step_size: 1   
+    sensors:
+      - entity: binary_sensor.downstairs_thermostat_fan
+        name: Fan
+        icon: 'mdi:fan'
+  - type: 'custom:simple-thermostat'
+    entity: climate.downstairs
+    step_size: 1      
+    sensors:
+      - entity: binary_sensor.upstairs_thermostat_fan
+        name: Fan
+        icon: 'mdi:fan'   
+  - camera_image: camera.front_door
+    entities:
+      - binary_sensor.ring_front_door_motion
+      - binary_sensor.ring_front_door_ding
+    title: Front Door
+    type: picture-glance
+  - cards:
+      - entity: weather.dark_sky
+        type: 'custom:weather-card'
+      - camera_image: !secret house_radarr
+        entities: []
+        title: Weather Radar
+        type: picture-glance
+    type: vertical-stack
+badges:
+  - sun.sun
+  - !secret device_user1
+  - !secret device_user2
+  - !secret device_user3
+  - !secret address_sensor
+  - binary_sensor.iss

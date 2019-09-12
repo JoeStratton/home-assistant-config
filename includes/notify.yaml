@@ -1,0 +1,9 @@
+- name: !secret name
+  platform: pushover
+  api_key: !secret pushover_api_key
+  user_key: !secret pushover_user_key
+
+- name: !secret roommate_notify_name
+  platform: pushover
+  api_key: !secret roommate_pushover_api_key
+  user_key: !secret roommate_pushover_user_key

@@ -1,0 +1,56 @@
+####BATTERIES########
+- platform: template   
+  sensors: 
+    front_door_lock_battery:
+      unit_of_measurement: '%'
+      value_template: '{{ states.lock.front_door.attributes.battery_level }}'
+      icon_template: >
+        {% set battery_level = states.lock.front_door.attributes.battery_level|default(0)|int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+    front_door_ring_battery:
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.ring_front_door_battery.state }}'
+      icon_template: >
+        {% set battery_level = states.sensor.ring_front_door_battery.state|default(0)|int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+    # !secret user1_phone_sensor:
+      # unit_of_measurement: '%'
+      # value_template: !secret user1_phone_sensor_att
+      # icon_template: >
+        # {% set battery_level = states.sensor.joes_iphone_battery_level.state|default(0)|int %}
+        # {% set battery_round = (battery_level / 10) |int * 10 %}
+        # {% if battery_round >= 100 %}
+          # mdi:battery
+        # {% elif battery_round > 0 %}
+          # mdi:battery-{{ battery_round }}
+        # {% else %}
+          # mdi:battery-alert
+        # {% endif %}
+    # !secret user2_phone_sensor:
+      # unit_of_measurement: '%'
+      # value_template: !secret user2_phone_sensor_att
+      # icon_template: >
+        # {% set battery_level = states.sensor.iphone_battery_level.state|default(0)|int %}
+        # {% set battery_round = (battery_level / 10) |int * 10 %}
+        # {% if battery_round >= 100 %}
+          # mdi:battery
+        # {% elif battery_round > 0 %}
+          # mdi:battery-{{ battery_round }}
+        # {% else %}
+          # mdi:battery-alert
+        # {% endif %} 
+      

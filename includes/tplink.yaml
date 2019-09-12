@@ -1,0 +1,17 @@
+discovery: false
+switch:
+  - host: !secret tplink_ip1
+  - host: !secret tplink_ip2
+  - host: !secret tplink_ip3
+  - host: !secret tplink_ip4
+  - host: !secret tplink_ip5
+  - host: !secret tplink_ip6
+  - host: !secret tplink_ip7
+  - host: !secret tplink_ip8
+  - host: !secret tplink_ip9
+  - host: !secret tplink_ip10
+  - host: !secret tplink_ip11
+  - host: !secret tplink_ip12
+  - host: !secret tplink_ip13
+  - host: !secret tplink_ip14
+  - host: !secret tplink_ip15

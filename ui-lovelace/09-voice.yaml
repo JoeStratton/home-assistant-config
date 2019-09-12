@@ -1,0 +1,16 @@
+title: Voice
+background: var(--background-image)
+icon: mdi:microphone
+path: voice
+badges: []
+cards:
+  - type: markdown
+    title: ''
+    content: >
+      ## Alexa Examples
+   
+      <ul><li>Alexa, Turn On The Theater</li><br/>
+      <li>Alexa, Turn On Downstairs TV</li><br/>
+      <li>Alexa, Turn On Music</li><br/>
+      <li>Alexa, Turn Off Office Lights</li></ul>
+     

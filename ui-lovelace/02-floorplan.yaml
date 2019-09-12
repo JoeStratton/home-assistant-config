@@ -1,0 +1,52 @@
+title: Floorplan
+path: floorplan
+icon: 'mdi:floor-plan'
+cards:
+  - entities:
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Front Room
+        items:
+          - light.front_room_lamp_1
+          - light.front_room_lamp_2
+        open: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Kitchen
+        items:
+          - light.kitchen
+          - light.pantry
+          - binary_sensor.pantry_door
+        open: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Living Room
+        items:
+          - light.living_room
+          - switch.living_room_fan
+          - light.hanging_light
+        open: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Outdoors
+        items:
+          - type: 'custom:custom-fan-card'
+            entity: fan.outdoor_fan        
+          - type: 'custom:slider-entity-row'
+            entity: light.outdoor_fan
+            full_row: false
+        open: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Other
+        items:
+          - light.stairs
+        open: true
+    show_header_toggle: false
+    title: ''
+    type: entities

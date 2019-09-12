@@ -1,0 +1,11 @@
+  - name: Joes Office   
+    latitude: !secret office_lat
+    longitude: !secret office_long
+    radius: 2
+    icon: mdi:school
+
+  - name: Backyard 
+    latitude: !secret backyard_lat
+    longitude: !secret backyard_long
+    radius: 5
+    icon: mdi:tree

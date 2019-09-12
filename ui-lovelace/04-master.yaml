@@ -1,0 +1,25 @@
+title: Master
+path: master
+icon: 'mdi:hotel'
+cards:
+  - entities:
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Bedroom
+        items:
+          - light.bedroom
+          - switch.bedroom_fan
+          - light.bedstand
+        open: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Bathroom
+        items:
+          - light.master_bath
+          - switch.master_bath_fan
+        open: true
+    show_header_toggle: false
+    title: ''
+    type: entities

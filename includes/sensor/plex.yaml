@@ -1,0 +1,8 @@
+ - platform: plex
+   host: !secret unjoe_ip
+   port: 32400
+   username: !secret joes_email
+   password: !secret plex_password
+   token: !secret plex_token
+   ssl: false
+   verify_ssl: false

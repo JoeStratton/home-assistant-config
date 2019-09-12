@@ -1,0 +1,3 @@
+- host: !secret modern_forms_ip
+  name: Outdoor Fan
+  light: true

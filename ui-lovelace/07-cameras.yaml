@@ -1,0 +1,66 @@
+title: Cameras
+path: cameras
+icon: 'mdi:cctv'
+cards:
+  - type: alarm-panel
+    entity: alarm_control_panel.ring_alarm
+    name: Ring Alarm
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - entity: camera.uvc_g3_driveway
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Driveway
+          - entity: camera.uvc_g3_street
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Street
+      - type: horizontal-stack
+        cards:        
+          - entity: camera.uvc_g3_front_room
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Front Room
+          - entity: camera.uvc_g3_dome_living_room
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Living Room
+      - type: horizontal-stack
+        cards:
+          - entity: camera.uvc_g3_backyard
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Backyard
+          - entity: camera.uvc_g3_pool
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Pool
+      - type: horizontal-stack
+        cards:
+          - entity: camera.kitchen_camera
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Kitchen
+          - entity: camera.office_camera
+            type: picture-entity
+            show_state: false
+            camera_view: live
+            aspect_ratio: 75%
+            name: Joe's Office
+        

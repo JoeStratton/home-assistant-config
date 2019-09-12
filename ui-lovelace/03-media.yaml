@@ -1,0 +1,619 @@
+title: Media
+background: var(--background-image)
+icon: mdi:library-video
+path: media
+cards:
+  - type: custom:vertical-stack-in-card
+    cards:
+      - entities:
+          - entity: input_boolean.theater_shield
+          - entity: input_boolean.theater_music
+          - entity: input_boolean.theater_lights
+        show_header_toggle: false
+        type: entities 
+        title: 'Theater'
+        #non party mode
+      - type: conditional
+        conditions:
+          - entity: media_player.theatre_room_main
+            state_not: "off"
+          - entity: input_boolean.drunk_mode
+            state: "off"
+        card:
+          type: custom:mini-media-player
+          entity: media_player.theatre_room_main
+          hide:
+            name: true
+            power_state: true
+            icon: true
+            power: true
+            mute: true
+            progress: true    
+          min_volume: 20
+          max_volume: 100
+        #party mode
+      - type: conditional
+        conditions:
+          - entity: media_player.theatre_room_main
+            state_not: "off"
+          - entity: input_boolean.drunk_mode
+            state: "on"
+        card:
+          type: custom:mini-media-player
+          entity: media_player.theatre_room_main
+          hide:
+            name: true
+            power_state: true
+            icon: true
+            power: true
+            mute: true
+            progress: true    
+          min_volume: 20
+          max_volume: 70
+  - type: conditional
+    conditions:
+      - entity: media_player.theater_shield
+        state_not: "off"
+    card:
+###################################################################################################
+## THEATER SHIELD CONTROLLER - HEADER - SHIELD LOGO
+###################################################################################################
+      type: custom:layout-card
+      layout: vertical
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: picture
+              image: /local/icons/remote/shield_logo.png
+              style: |
+                ha-card {
+                  padding: 10px 10px 10px 10px;
+                  border-radius: 20px;
+                  background-color: rgba(56,60,69,1);
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+##-------------------------------------------------------------------------------------------------
+## THEATER SHIELD - ROW 2 - 3 BUTTONS (ADB CONTROLLED + CUSTOM COMPONENT - ANDROIDTV)
+##-------------------------------------------------------------------------------------------------
+        - type: horizontal-stack
+          cards:
+            - type: entity-button
+              icon: mdi:power
+              name: "ON"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: POWER
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:arrow-up-bold
+              name: "UP"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: UP
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:power-off
+              name: "OFF"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: SLEEP
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                } 
+##-------------------------------------------------------------------------------------------------
+## THEATER SHIELD - ROW 4 - 3 BUTTONS (ADB CONTROLLED + CUSTOM COMPONENT - ANDROIDTV)
+##-------------------------------------------------------------------------------------------------
+        - type: horizontal-stack
+          cards:
+            - type: entity-button
+              icon: mdi:arrow-left-bold
+              name: "LEFT"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: LEFT
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:camera-control
+              name: "ENTER"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: ENTER
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:arrow-right-bold
+              name: "RIGHT"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: RIGHT
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+##-------------------------------------------------------------------------------------------------
+## THEATER SHIELD - ROW 5 - 3 BUTTONS (ADB CONTROLLED + CUSTOM COMPONENT - ANDROIDTV)
+##-------------------------------------------------------------------------------------------------
+        - type: horizontal-stack
+          cards:
+            - type: entity-button
+              icon: mdi:backburger
+              name: "BACK"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: BACK
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:arrow-down-bold
+              name: "DOWN"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: DOWN
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:home-circle
+              name: "HOME"
+              entity: media_player.theater_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.theater_shield
+                  command: HOME
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }   
+  - type: custom:vertical-stack-in-card
+    cards:
+      - entities:
+          - entity: input_boolean.living_room_shield
+          - entity: input_boolean.living_room_music
+          - entity: input_boolean.living_room_lights
+        show_header_toggle: false
+        type: entities 
+        title: 'Living Room'
+        #non party mode
+      - type: conditional
+        conditions:
+          - entity: media_player.living_room_main
+            state_not: "off"
+          - entity: input_boolean.drunk_mode
+            state: "off"
+        card:
+          type: custom:mini-media-player
+          name: Main Zone
+          entity: media_player.living_room_main
+          hide:
+            name: false
+            power_state: true
+            icon: true
+            power: true
+            mute: true
+            progress: true
+          min_volume: 20
+          max_volume: 80
+        #party mode
+      - type: conditional
+        conditions:
+          - entity: media_player.living_room_main
+            state_not: "off"
+          - entity: input_boolean.drunk_mode
+            state: "on"
+        card:
+          type: custom:mini-media-player
+          name: Main Zone
+          entity: media_player.living_room_main
+          hide:
+            name: false
+            power_state: true
+            icon: true
+            power: true
+            mute: true
+            progress: true
+          min_volume: 20
+          max_volume: 60
+      - type: conditional
+        conditions:
+          - entity: media_player.living_room_zone2
+            state: "off"
+        card:
+          type: custom:mini-media-player
+          entity: media_player.living_room_zone2
+          name: Turn On Zone 2
+          hide:
+            icon: true 
+        #non party mode            
+      - type: conditional
+        conditions:
+          - entity: media_player.living_room_zone2
+            state_not: "off"
+          - entity: input_boolean.drunk_mode
+            state: "off"
+        card:
+          type: custom:mini-media-player
+          name: Zone 2
+          entity: media_player.living_room_zone2
+          hide:
+            name: false
+            power_state: false
+            icon: true
+            power: false
+            mute: true
+            progress: true
+          min_volume: 50
+          max_volume: 100
+        #party mode
+      - type: conditional
+        conditions:
+          - entity: media_player.living_room_zone2
+            state_not: "off"
+          - entity: input_boolean.drunk_mode
+            state: "on"
+        card:
+          type: custom:mini-media-player
+          name: Zone 2
+          entity: media_player.living_room_zone2
+          hide:
+            name: false
+            power_state: false
+            icon: true
+            power: false
+            mute: true
+            progress: true
+          min_volume: 50
+          max_volume: 90
+  - type: conditional
+    conditions:
+      - entity: media_player.living_room_shield
+        state_not: "off"
+    card:
+###################################################################################################
+## LIVING ROOM SHIELD CONTROLLER - HEADER - SHIELD LOGO
+###################################################################################################
+      type: custom:layout-card
+      layout: vertical
+      cards:
+        - type: horizontal-stack
+          cards:
+            - type: picture
+              image: /local/icons/remote/shield_logo.png
+              style: |
+                ha-card {
+                  padding: 10px 10px 10px 10px;
+                  border-radius: 20px;
+                  background-color: rgba(56,60,69,1);
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+##-------------------------------------------------------------------------------------------------
+## LIVING ROOM SHIELD - ROW 2 - 3 BUTTONS (ADB CONTROLLED + CUSTOM COMPONENT - ANDROIDTV)
+##-------------------------------------------------------------------------------------------------
+        - type: horizontal-stack
+          cards:
+            - type: entity-button
+              icon: mdi:power
+              name: "ON"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: POWER
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:arrow-up-bold
+              name: "UP"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: UP
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:power-off
+              name: "OFF"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: SLEEP
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+##-------------------------------------------------------------------------------------------------
+## LIVING ROOM SHIELD - ROW 4 - 3 BUTTONS (ADB CONTROLLED + CUSTOM COMPONENT - ANDROIDTV)
+##-------------------------------------------------------------------------------------------------
+        - type: horizontal-stack
+          cards:
+            - type: entity-button
+              icon: mdi:arrow-left-bold
+              name: "LEFT"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: LEFT
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:camera-control
+              name: "ENTER"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: ENTER
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:arrow-right-bold
+              name: "RIGHT"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: RIGHT
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+##-------------------------------------------------------------------------------------------------
+## LIVING ROOM SHIELD - ROW 5 - 3 BUTTONS (ADB CONTROLLED + CUSTOM COMPONENT - ANDROIDTV)
+##-------------------------------------------------------------------------------------------------
+        - type: horizontal-stack
+          cards:
+            - type: entity-button
+              icon: mdi:backburger
+              name: "BACK"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: BACK
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:arrow-down-bold
+              name: "DOWN"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: DOWN
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }
+            - type: entity-button
+              icon: mdi:home-circle
+              name: "HOME"
+              entity: media_player.living_room_shield
+              hold_action: none
+              tap_action:
+                action: call-service
+                service: androidtv.adb_command
+                service_data:
+                  entity_id: media_player.living_room_shield
+                  command: HOME
+              style: |
+                ha-card {
+                  background-color: rgba(56,60,69,1);
+                  border-radius: 20px;
+                  border: solid 3px rgba(118,185,0,1);
+                  box-shadow: 3px 3px rgba(0,0,0,0.4);
+                }      
+  - type: custom:vertical-stack-in-card
+    cards:
+      - entities:
+          - type: 'custom:button-entity-row'
+            buttons:
+              - entity: switch.bedroom_tv_power
+                icon: 'mdi:power'
+              - entity: switch.bedroom_tv_volume_up
+                icon: 'mdi:volume-plus'
+              - entity: switch.bedroom_tv_volume_down
+                icon: 'mdi:volume-minus'
+        show_header_toggle: false
+        type: entities 
+        title: 'Bedroom'
+  - entities:
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: New On Plex
+        items:
+          - type: custom:upcoming-media-card
+            entity: sensor.plex_recently_added
+            title: ''
+            image_style: fanart
+            hide_empty: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Sonarr
+        items:
+          - sensor.sonarr_upcoming
+          - sensor.sonarr_wanted
+          - sensor.sonarr_queue
+          - type: custom:upcoming-media-card
+            entity: sensor.sonarr_upcoming_media
+            title: ''
+            image_style: fanart
+            hide_empty: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Radarr
+        items:
+          - sensor.radarr_upcoming
+          - sensor.radarr_movies
+          - type: custom:upcoming-media-card
+            entity: sensor.radarr_upcoming_media
+            title: ''
+            image_style: fanart
+            hide_empty: true
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: NZBGet
+        items:
+          - sensor.nzbget_speed
+          - sensor.nzbget_average_speed
+          - sensor.nzbget_queue_size
+      - type: custom:fold-entity-row
+        head:
+          type: section
+          label: Deluge
+        items:
+          - sensor.deluge_down_speed
+          - sensor.deluge_up_speed
+    show_header_toggle: false
+    title: Downloads
+    type: entities

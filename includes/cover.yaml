@@ -1,0 +1,35 @@
+- platform: myq
+  username: !secret craftsman_username
+  password: !secret craftsman_password
+  type: craftsman
+  # icon_template:
+    # '{% if (states.cover.garage_door.state) == "closed" %}
+    # mdi:garage
+    # {% else %}
+    # mdi:garage-open
+    # {% endif %}'
+   
+  
+# - platform: template
+  # covers:
+    # garage_door:
+      # friendly_name: "Garge Door"
+      # position_template: "{{ states.cover.garage_door }}"
+      # open_cover:
+        # service: cover.open_cover
+        # data:
+          # entity_id: cover.garage_door
+      # close_cover:
+        # service: cover.close_cover
+        # data:
+          # entity_id: cover.garage_door
+      # stop_cover:
+        # service: cover.stop_cover
+        # data:
+          # entity_id: cover.garage_door
+      # icon_template: >-
+        # {% if (states.cover.garage_door.state)|float > 0 %}
+          # mdi:garage
+        # {% else %}
+          # mdi:garage-open
+        # {% endif %}     

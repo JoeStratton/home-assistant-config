@@ -1,0 +1,21 @@
+living_room:
+  name: Living Room
+  entities:
+    - switch.living_room_hanging_light
+    - switch.stairs_light
+        
+master_bedroom:
+  name: Master Bedroom
+  entities:
+    - switch.bedstand_lamp
+    - switch.bedroom_fan
+    - switch.bedroom_light
+
+all_lights:
+  name: All Lights
+  entities:
+    - switch.bedstand_lamp
+    - switch.bedroom_fan
+    - switch.bedroom_light
+    - switch.living_room_hanging_light
+    - switch.stairs_light

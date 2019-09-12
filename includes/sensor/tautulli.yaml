@@ -1,0 +1,14 @@
+- platform: tautulli
+  api_key: !secret tautulli_api_key
+  host: !secret unjoe_ip
+  path: /tautulli
+  monitored_conditions:
+    - LAN bandwidth
+    - Stream count
+    - WAN bandwidth
+    - Total bandwidth
+  monitored_users:
+    - j123ss
+    - bsleater
+    - kkgiller@aol.com
+    - romeowhiskey

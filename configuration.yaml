@@ -1,0 +1,60 @@
+homeassistant:
+  name: !secret name
+  latitude: !secret house_lat
+  longitude: !secret house_long
+  elevation: !secret house_elevation
+  unit_system: imperial
+  time_zone: !secret tz
+  auth_mfa_modules:
+    - type: totp
+  auth_providers:
+    - type: homeassistant     
+  customize: !include includes/customize.yaml  
+
+frontend:
+  javascript_version: latest
+  themes: !include_dir_merge_named includes/themes/
+  
+http:
+  base_url: !secret url
+  ip_ban_enabled: true
+  login_attempts_threshold: 99
+  
+customizer:
+  custom_ui: local
+
+lovelace: !include includes/lovelace.yaml
+group: !include includes/groups.yaml
+zone: !include includes/zones.yaml
+sensor: !include_dir_merge_list includes/sensor/
+switch: !include_dir_merge_list includes/switch/
+cover: !include includes/cover.yaml
+weather: !include includes/weather.yaml
+camera: !include includes/camera.yaml
+tts: !include includes/tts.yaml
+media_player: !include includes/media_player.yaml
+notify: !include includes/notify.yaml
+binary_sensor: !include includes/binary_sensor.yaml
+climate: !include includes/climate.yaml
+tplink: !include includes/tplink.yaml
+hue: !include includes/hue.yaml
+august: !include includes/august.yaml
+ring: !include includes/ring.yaml
+nest: !include includes/nest.yaml
+light: !include includes/light.yaml
+google: !include includes/google.yaml
+alexa_media: !include includes/alexa_media.yaml
+mqtt: !include includes/mqtt.yaml
+hacs: !include includes/hacs.yaml
+alexa: !include includes/alexa.yaml
+input_boolean: !include includes/input_boolean.yaml
+modernforms: !include includes/modernforms.yaml
+
+map:
+sun:
+ffmpeg:
+config:
+#system_health:
+# history:
+# logbook:
+# shopping_list:

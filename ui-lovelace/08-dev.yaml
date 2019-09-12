@@ -1,0 +1,85 @@
+title: Dev
+path: dev
+icon: 'mdi:dev-to'
+cards:
+  - entities:
+      - entity: input_boolean.drunk_mode
+    show_header_toggle: false
+    type: entities 
+    title: ''
+  - entities:
+      - type: 'custom:battery-entity'
+        entity: sensor.front_door_lock_battery
+        warning: 50
+        critical: 20
+        name: Front Door Lock
+      - type: 'custom:battery-entity'
+        entity: sensor.front_door_ring_battery
+        warning: 50
+        critical: 20
+        name: Front Door Ring
+      # - type: 'custom:battery-entity'
+        # entity: !secret user1_phone_sensor
+        # warning: 50
+        # critical: 20
+        # name: !secret user1_phone
+      # - type: 'custom:battery-entity'
+        # entity: !secret user2_phone_sensor
+        # warning: 50
+        # critical: 20
+        # name: !secret user2_phone
+    show_header_toggle: false
+    title: ''
+    type: entities
+  - type: "custom:atomic-calendar"
+    title: "Calendar"
+    entities:
+    - entity: calendar.holidays_in_united_states
+      type: holiday
+  # - type: "custom:atomic-calendar"
+    # title: "Calendar"
+    # enableModeChange: true
+    # defaultMode: 2
+    # untilText: 'Until'
+    # fullDayEventText: 'All Day'
+    # showColors: true
+    # maxDaysToShow: 7
+    # showMonth: false
+    # showLocation: true
+    # dateColor: black
+    # dateSize: 90
+    # timeColor: blue
+    # timeSize: 90
+    # titleColor: black
+    # titleSize: 100
+    # locationIconColor: 'rgb(230, 124, 115)'
+    # locationLinkColor: black
+    # locationTextSize: 90
+    # dimFinishedEvents: true
+    # finishedEventOpacity: 0.6
+    # finishedEventFilter: 'grayscale(100%)'
+    # dayWrapperLineColor: black
+    # eventBarColor: blue
+    # showProgressBar: true
+    # progressBarColor: blue       
+    # entities:
+      # - entity: calendar.holidays_in_united_states
+        # type: holiday
+      # - entity: !secret calendar_user1
+        # color: blue
+        # type: icon1
+  - entities:
+      - entity: !secret roommate_sensor
+      - entity: sensor.office_sensor
+      - entity: sensor.kitchen_sensor 
+      - entity: sensor.alexa_media_player
+      - entity: sensor.haaska
+      - entity: sensor.hacs
+      - entity: sensor.home_assistant
+      - entity: sensor.lovelace_floorplan
+      - entity: sensor.ring_alarm_mqtt
+      - entity: sensor.tautulli
+    show_header_toggle: false
+    title: 'Dev'
+    type: entities
+

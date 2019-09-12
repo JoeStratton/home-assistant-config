@@ -1,0 +1,6 @@
+#- platform: pi_hole
+#  host: !secret pihole_ip
+#  location: admin
+#  ssl: false
+#  verify_ssl: false
+  

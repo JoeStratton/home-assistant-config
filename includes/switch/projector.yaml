@@ -1,0 +1,11 @@
+# platform: telnet
+# switches:
+  # theater_projector:
+    # resource: !secret projector_ip
+    # port: 23
+    # command_on: "~0000 1"
+    # command_off: "~0000 0"
+    # command_state: "~00124 1"
+    # value_template: '{{ value == "OK1" }}'
+    # name: theater_projector
+    # timeout: 5.0

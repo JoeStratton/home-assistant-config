@@ -1,0 +1,21 @@
+# - platform: mqtt_room
+  # device_id: "eb8ee9fd-a49c-428f-829b-4553e34616e5"
+  # away_timeout: 60
+  # name: 'Office Sensor'
+  # state_topic: room_presence
+  
+# - platform: mqtt_room
+  # device_id: "mqttjs_a2a112e4"
+  # away_timeout: 60
+  # name: !secret roommate_mqtt
+  # state_topic: room_presence
+  
+# - platform: mqtt_room
+  # device_id: "e516f1d5-9fb4-4687-84ec-627e4d49f00d"
+  # away_timeout: 60
+  # name: 'Kitchen Sensor'
+  # state_topic: room_presence
+  
+- platform: mqtt
+  name: 'Backyard Camera Gif'
+  state_topic: 'cameras/gifs/Backyard'

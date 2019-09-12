@@ -1,0 +1,36 @@
+- platform: switch
+  name: Stairs
+  entity_id: switch.stairs_light
+- platform: switch
+  name: Office
+  entity_id: switch.office_light
+- platform: switch
+  name: Master Bath
+  entity_id: switch.master_bath_light
+- platform: switch
+  name: Living Room
+  entity_id: switch.living_room_light
+- platform: switch
+  name: Hanging Light
+  entity_id: switch.living_room_hanging_light
+- platform: switch
+  name: Kitchen
+  entity_id: switch.kitchen_lights
+- platform: switch
+  name: Pantry
+  entity_id: switch.pantry_light
+- platform: switch
+  name: Brandon's Room
+  entity_id: switch.brandons_room_light
+- platform: switch
+  name: Bedstand
+  entity_id: switch.bedstand_lamp
+- platform: switch
+  name: Bedroom
+  entity_id: switch.bedroom_light
+- platform: switch
+  name: Front Room Lamp 1
+  entity_id: switch.front_room_lamp_1
+- platform: switch
+  name: Front Room Lamp 2
+  entity_id: switch.front_room_lamp_2

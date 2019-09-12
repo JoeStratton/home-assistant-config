@@ -1,0 +1,106 @@
+#######MAJOR CHANGES############
+# lock.front_door:
+  # custom_ui_state_card: state-card-custom-ui
+
+#######RENAMING#################
+group.all_switches:
+  friendly_name: All Lights
+media_player.living_room_main:
+  friendly_name: Main Receiver
+media_player.living_room_zone2:
+  friendly_name: Zone 2 Receiver
+!secret address_sensor:
+  friendly_name: !secret name_value
+binary_sensor.iss:
+  friendly_name: ISS  
+light.bedroom_2:
+  friendly_name: !secret roommate_hue_light
+!secret device_user1:
+  friendly_name: !secret user1
+!secret device_user2:
+  friendly_name: !secret user2
+!secret device_user3:
+  friendly_name: !secret user3
+
+  
+########ICONS############
+!secret rooommate_room_light_switch:
+  icon: 'mdi:fan'
+  friendly_name: !secret friendly_rooommate_room_light_switch 
+switch.master_bath_fan:
+  icon: 'mdi:fan'
+switch.living_room_fan:
+  icon: 'mdi:fan'   
+switch.bedroom_fan:
+  icon: 'mdi:fan'
+
+#################DOWNLOADS#################
+sensor.deluge_down_speed:
+  icon: 'mdi:download'
+sensor.deluge_up_speed:
+  icon: 'mdi:upload'
+sensor.nzbget_speed:
+  icon: 'mdi:download'
+sensor.nzbget_average_speed:
+  icon: 'mdi:download-multiple'
+sensor.nzbget_queue_size:
+  icon: 'mdi:cloud-download-outline'
+sensor.sonarr_queue:
+  icon: 'mdi:cloud-download-outline'
+sensor.sonarr_wanted:
+  icon: 'mdi:cloud-search-outline'
+sensor.sonarr_upcoming:
+  icon: 'mdi:calendar-search'
+sensor.radarr_upcoming:
+  icon: 'mdi:calendar-search'
+sensor.radarr_movies:
+  icon: 'mdi:filmstrip'
+  
+########OUTSIDE############
+cover.garage_door:
+  friendly_name: Garage Door
+  device_class: garage   
+fan.outdoor_fan:
+  custom_ui_state_card: state-card-custom-ui
+  friendly_name: Fan
+light.outdoor_fan:
+  friendly_name: Light
+  
+##############IGNORED ENTITIES##################
+media_player.58_sharp_roku_tv:
+  hidden: false
+  friendly_name: Downstairs TV
+sensor.bssid:
+  hidden: true
+sensor.internet_time:
+  hidden: true
+sensor.nzbget_article_cache:
+  hidden: true
+sensor.nzbget_uptime:
+  hidden: true
+switch.stairs_light:
+  hidden: true
+switch.office_light:
+  hidden: true
+switch.master_bath_light:
+  hidden: true
+switch.living_room_light:
+  hidden: true
+switch.living_room_hanging_light:
+  hidden: true
+switch.kitchen_lights:
+  hidden: true
+switch.bedstand_lamp:
+  hidden: true
+switch.bedroom_light:
+  hidden: true
+sensor.connection_type:
+  hidden: true
+binary_sensor.downstairs_thermostat_is_locked:
+  hidden: true
+binary_sensor.downstairs_thermostat_is_using_emergency_heat:
+  hidden: true
+binary_sensor.upstairs_thermostat_is_locked:
+  hidden: true
+binary_sensor.upstairs_thermostat_is_using_emergency_heat:
+  hidden: true

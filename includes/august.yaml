@@ -1,0 +1,3 @@
+login_method: email
+username: !secret joes_email2
+password: !secret august_password

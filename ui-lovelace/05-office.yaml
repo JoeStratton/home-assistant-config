@@ -1,0 +1,9 @@
+1title: Office
+path: office
+icon: 'mdi:office-building'
+cards:
+  - entities:
+     - entity: light.office
+    show_header_toggle: false
+    title: ''
+    type: entities      

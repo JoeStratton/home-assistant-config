@@ -1,0 +1,9 @@
+- platform: github
+  access_token: !secret github_access_token
+  repositories:
+    - path: pkozul/lovelace-floorplan
+    - path: mike-grant/haaska
+    - path: tsightler/ring-alarm-mqtt
+    - path: keatontaylor/alexa_media_player
+    - path: home-assistant/home-assistant
+

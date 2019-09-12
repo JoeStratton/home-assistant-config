@@ -1,0 +1,2 @@
+username: !secret joes_email
+password: !secret ring_password
