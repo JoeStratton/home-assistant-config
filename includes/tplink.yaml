@@ -15,3 +15,5 @@ switch:
   - host: !secret tplink_ip13
   - host: !secret tplink_ip14
   - host: !secret tplink_ip15
+dimmer:
+  - host: !secret tplink_ip16

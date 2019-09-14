@@ -14,12 +14,12 @@ homeassistant:
 frontend:
   javascript_version: latest
   themes: !include_dir_merge_named includes/themes/
-  
+
 http:
   base_url: !secret url
   ip_ban_enabled: true
   login_attempts_threshold: 99
-  
+
 customizer:
   custom_ui: local
 

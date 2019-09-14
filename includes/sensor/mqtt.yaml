@@ -17,5 +17,33 @@
   # state_topic: room_presence
   
 - platform: mqtt
-  name: 'Backyard Camera Gif'
-  state_topic: 'cameras/gifs/Backyard'
+  name: 'Office Camera Motion'
+  state_topic: 'camera/motion/OfficeCamera'
+  
+- platform: mqtt
+  name: 'Kitchen Camera Motion'
+  state_topic: 'camera/motion/KitchenCamera'
+  
+- platform: mqtt
+  name: 'Backyard Camera Motion'
+  state_topic: 'camera/motion/BackyardCamera'
+  
+- platform: mqtt
+  name: 'Driveway Camera Motion'
+  state_topic: 'camera/motion/DrivewayCamera'
+
+- platform: mqtt
+  name: 'Front Room Camera Camera Motion'
+  state_topic: 'camera/motion/FrontRoomCamera'
+  
+- platform: mqtt
+  name: 'Pool Camera Motion'
+  state_topic: 'camera/motion/PoolCamera'
+  
+- platform: mqtt
+  name: 'Street Camera Motion'
+  state_topic: 'camera/motion/StreetCamera'
+
+- platform: mqtt
+  name: 'Living Room Camera Motion'
+  state_topic: 'camera/motion/LivingRoomCamera'

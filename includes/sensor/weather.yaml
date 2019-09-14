@@ -36,5 +36,5 @@
 #    - icon
 #    - nearest_storm_distance
 
-- platform: nws_alerts
-  zone_id: !secret nws_zone
+# - platform: nws_alerts
+  # zone_id: !secret nws_zone

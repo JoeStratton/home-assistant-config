@@ -3,6 +3,7 @@ deps
 tts
 .august.conf
 videos
+custom_scripts
 .google.token
 .ring_cache.pickle
 alexa_media.j123ss@gmail.com.pickle
@@ -11,4 +12,4 @@ home-assistant.log
 home-assistant_v2.db
 secrets.yaml
 **/__pycache__
-www/custom-lovelace/upcoming-media-card/images/plex
+www/custom-lovelace

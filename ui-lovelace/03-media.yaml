@@ -495,7 +495,7 @@ cards:
 ##-------------------------------------------------------------------------------------------------
         - type: horizontal-stack
           cards:
-            - type: entity-button
+            - type: entity-button   
               icon: mdi:backburger
               name: "BACK"
               entity: media_player.living_room_shield
@@ -556,10 +556,16 @@ cards:
             buttons:
               - entity: switch.bedroom_tv_power
                 icon: 'mdi:power'
+                style:
+                  - color: var(--primary-color)
               - entity: switch.bedroom_tv_volume_up
                 icon: 'mdi:volume-plus'
+                style:
+                  - color: var(--primary-color)
               - entity: switch.bedroom_tv_volume_down
                 icon: 'mdi:volume-minus'
+                style:
+                  - color: var(--primary-color)
         show_header_toggle: false
         type: entities 
         title: 'Bedroom'
