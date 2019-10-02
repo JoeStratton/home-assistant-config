@@ -14,6 +14,7 @@
   <img src="https://img.shields.io/github/commit-activity/y/JoeStratton/home-assistant-config.svg"/>
   <img src="https://img.shields.io/github/last-commit/JoeStratton/home-assistant-config.svg?style=plasticr"/>
   <img src="https://img.shields.io/github/issues/JoeStratton/home-assistant-config.svg"/>
+  <img src="https://travis-ci.org/JoeStratton/home-assistant-config.svg?branch=master"/>
 </p>
 <hr --- </hr> 
 
