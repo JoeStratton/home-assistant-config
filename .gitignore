@@ -12,4 +12,4 @@ home-assistant.log
 home-assistant_v2.db
 secrets.yaml
 **/__pycache__
-www/custom-lovelace
+www/custom-lovelace/

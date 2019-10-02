@@ -1,8 +1,9 @@
-- platform: unifi
-  host: !secret unjoe_ip
-  username: !secret joe_user
-  password: !secret unifi_password
-  verify_ssl: false
-  port: 8443
-  new_device_defaults:
-    track_new_devices: false
+#deprecated
+# - platform: unifi
+  # host: !secret unjoe_ip
+  # username: !secret joe_user
+  # password: !secret unifi_password
+  # verify_ssl: false
+  # port: 8443
+  # new_device_defaults:
+    # track_new_devices: false

@@ -49,12 +49,13 @@ hacs: !include includes/hacs.yaml
 alexa: !include includes/alexa.yaml
 input_boolean: !include includes/input_boolean.yaml
 modernforms: !include includes/modernforms.yaml
+# unifi: !include includes/unifi.yaml
 
 map:
 sun:
 ffmpeg:
 config:
 #system_health:
-# history:
-# logbook:
-# shopping_list:
+#history:
+#logbook:
+#shopping_list:
