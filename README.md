@@ -5,15 +5,15 @@
 <h3 align="center">Home Assistant Configuration &amp; Documentation for my Smart House.</h3>
 <p align="center">Be sure to :star: my repo!</p>
 <p align="center">
-<img src="http://hits.dwyl.io/JoeStratton/JoeStratton/home-assistant-config.svg"/>
+<img src="http://hits.dwyl.io/JoeStratton/home-assistant-config.svg"/>
 </p>  
 <p>
-  <img src="https://img.shields.io/github/stars/JoeStratton/JoeStratton/home-assistant-config.svg?style=plasticr"/>
+  <img src="https://img.shields.io/github/stars/JoeStratton/home-assistant-config.svg?style=plasticr"/>
   <img src="https://img.shields.io/badge/HA--Version-0.99.3-brightgreen.svg"/>
   <img src="https://img.shields.io/maintenance/yes/2019.svg"/>
-  <img src="https://img.shields.io/github/commit-activity/y/JoeStratton/JoeStratton/home-assistant-config.svg"/>
-  <img src="https://img.shields.io/github/last-commit/JoeStratton/JoeStratton/home-assistant-config.svg?style=plasticr"/>
-  <img src="https://img.shields.io/github/issues/JoeStratton/JoeStratton/home-assistant-config.svg"/>
+  <img src="https://img.shields.io/github/commit-activity/y/JoeStratton/home-assistant-config.svg"/>
+  <img src="https://img.shields.io/github/last-commit/JoeStratton/home-assistant-config.svg?style=plasticr"/>
+  <img src="https://img.shields.io/github/issues/JoeStratton/home-assistant-config.svg"/>
 </p>
 <hr --- </hr> 
 
