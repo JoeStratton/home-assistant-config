@@ -8,30 +8,12 @@
 <img src="http://hits.dwyl.io/JoeStratton/JoeStratton/home-assistant-config.svg"/>
 </p>  
 <p>
-  <img src="https://img.shields.io/github/stars/JamesMcCarthy79/Home-Assistant-Config.svg?style=plasticr"/>
-  <img src="https://img.shields.io/badge/HA--Version-0.95.4-brightgreen.svg"/>
+  <img src="https://img.shields.io/github/stars/JoeStratton/JoeStratton/home-assistant-config.svg?style=plasticr"/>
+  <img src="https://img.shields.io/badge/HA--Version-0.99.3-brightgreen.svg"/>
   <img src="https://img.shields.io/maintenance/yes/2019.svg"/>
-  <img src="https://img.shields.io/github/commit-activity/y/JamesMcCarthy79/Home-Assistant-Config.svg"/>
-  <img src="https://img.shields.io/github/last-commit/JamesMcCarthy79/Home-Assistant-Config.svg?style=plasticr"/>
-  <img src="https://img.shields.io/github/issues/JamesMcCarthy79/Home-Assistant-Config.svg"/>
-  <img src="https://img.shields.io/badge/license-Unlicense-blue.svg"/>
-</p>
-<p>
-  <href="https://github.com/hassio-addons/addon-appdaemon3"><img src="https://img.shields.io/badge/AppDaemon3-v1.5.0-5294E2.svg"/>
-  <href="https://github.com/danielwelch/hassio-dropbox-sync"><img src="https://img.shields.io/badge/DropBox Sync-v1.3.0-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-grafana"><img src="https://img.shields.io/badge/Grafana-v2.2.1-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-grocy"><img src="https://img.shields.io/badge/Grocy-v0.3.0-5294E2.svg"/>
-  <href="https://www.home-assistant.io/addons/ide"><img src="https://img.shields.io/badge/IDE-v2.0.0-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-influxdb"><img src="https://img.shields.io/badge/InfluxDB-v3.1.0-5294E2.svg"/>  
-</p>
-<p>
-  <href="https://www.home-assistant.io/addons/mosquitto/"><img src="https://img.shields.io/badge/Mosquitto-v4.0-5294E2.svg"/>
-  <href="https://github.com/danielwelch/hassio-dropbox-sync"><img src="https://img.shields.io/badge/Network UPS Tools-v0.1-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-node-red"><img src="https://img.shields.io/badge/Node--RED-4.0.1-5294E2.svg"/>
-  <href="https://www.home-assistant.io/addons/samba/"><img src="https://img.shields.io/badge/Samba-v8.1-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-ssh"><img src="https://img.shields.io/badge/SSH-v6.0.0-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-tasmoadmin"><img src="https://img.shields.io/badge/TasmoAdmin-0.8.0-5294E2.svg"/>
-  <href="https://github.com/hassio-addons/addon-zigbee2mqtt"><img src="https://img.shields.io/badge/Zigbee2MQTT-1.4.0-5294E2.svg"/>
+  <img src="https://img.shields.io/github/commit-activity/y/JoeStratton/JoeStratton/home-assistant-config.svg"/>
+  <img src="https://img.shields.io/github/last-commit/JoeStratton/JoeStratton/home-assistant-config.svg?style=plasticr"/>
+  <img src="https://img.shields.io/github/issues/JoeStratton/JoeStratton/home-assistant-config.svg"/>
 </p>
 <hr --- </hr> 
 
@@ -45,53 +27,14 @@
 |:--------------:|:-------:|:----:|:------:|:-------------:|:------:|:-------:|:--------:|
 |169             |8        |5     |10       |10             |16      |754      |64        |
 
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Logo.png" width="150"/>
-
-| Gateways | Door/Window Sensors | Motion Sensors | Smoke Sensors | Smart Switches | Vibration Sensors | Water Leak Sensors |
-|:--------:|:-------------------:|:--------------:|:-------------:|:--------------:|:-----------------:|:------------------:|
-|2         |10                   |12              |2              |7               |2                  |2                   |
-
-| Philips Light Bulb | Yi Light Bulb | Plant Sensors | Temp/Hum Sensors | Smart Plugs | Appliances | Lamps | Cubes | Mi TV 4 |
-|:------------------:|:-------------:|:-------------:|:----------------:|:-----------:|:----------:|:-----:|:-----:|:-------:| 
-|5                   |4              |16             |7                 |12           |4           |1      |1      |1        |
-
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20Logo.png" width="180"/>
-
-| Basic | POW2 | iFan02 | Wall Switch (Touch) |
-|:-----:|:----:|:------:|:-------------------:|
-|15     |2     |4       |20                   |
-
-The wall switches are not actually used they are brand new in box they don't fit properly and I decided before they arrived that I preferred the standard wall switch look as our house is in a hampton style and these were a bit too modern looking. If you are interested I'd be happy to sell them at half cost price message me over in the forum [jimpower](https://community.home-assistant.io/u/jimpower/summary).
-<hr --- </hr> 
-
-| [Topology](https://github.com/JamesMcCarthy79/Home-Assistant-Config#smart-home-hardware-topology) | [HA Hardware](https://github.com/JamesMcCarthy79/Home-Assistant-Config#home-assistant-hardware) | [HA Software](https://github.com/JamesMcCarthy79/Home-Assistant-Config#home-assistant-software) | [Network](https://github.com/JamesMcCarthy79/Home-Assistant-Config#kingia-castle-network) | [Voice Control](https://github.com/JamesMcCarthy79/Home-Assistant-Config#voice-control--tts) |  [Gateways](https://github.com/JamesMcCarthy79/Home-Assistant-Config#gateways) | [Sensors](https://github.com/JamesMcCarthy79/Home-Assistant-Config#sensors) | [Fan & Lighting](https://github.com/JamesMcCarthy79/Home-Assistant-Config#fan--lighting-control) |
-| --- | --- | --- | --- | --- |--- | --- | --- |
-
- [LED Lighting](https://github.com/JamesMcCarthy79/Home-Assistant-Config#led-lighting) | [Appliances & Smart Power](https://github.com/JamesMcCarthy79/Home-Assistant-Config#appliances-and-smart-power) | [Media Control](https://github.com/JamesMcCarthy79/Home-Assistant-Config#media-control) | [Multi Room Audio](https://github.com/JamesMcCarthy79/Home-Assistant-Config#multi-room-audio) | [Security](https://github.com/JamesMcCarthy79/Home-Assistant-Config#security) | [Garden](https://github.com/JamesMcCarthy79/Home-Assistant-Config#garden) | [Config](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/config) |
-|  --- | --- | --- | --- | --- | --- | --- |
-
-| [My Favourite Resources](https://github.com/JamesMcCarthy79/Home-Assistant-Config#my-favourite-resources) | [Packages](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/config/packages#stay-tuned-this-section-will-be-getting-built-out-in-the-coming-weeks) | [Lovelace UI](https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/config/ui-lovelace.yaml) |
-| --- | --- | --- |
-
-<hr --- </hr> 
-
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Nabu%20Casa.jpg" width="100"/>
-
 | Lovelace Mode | Resources | Views | Webhooks |
 |:-------------:|:---------:|:-----:|:--------:|
 |YAML           |24         |18     | 11       |
-
-| [Lovelace Screenshots](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/Transparent%20Lovelace) |
-| --- |
-| [<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Transparent%20Lovelace/11.%20Settings.png"/>](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/Transparent%20Lovelace) |
 
 | [Home Assistant Screenshots](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/HA%20Screenshots) |
 | --- |
 | [<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20Screenshots/01.%20Home.png"/>](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/HA%20Screenshots) |
 
-| [HADashboard Screenshots](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/HADashboard%20Screenshots) |
-| --- |
-| [<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HADashboard%20Screenshots/HADash%20-%20Downstairs%20Panel.png"/>](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/HADashboard%20Screenshots) |
 <hr --- </hr>
 
 ### Smart Home Hardware Topology
