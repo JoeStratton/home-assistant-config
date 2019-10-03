@@ -10,7 +10,7 @@ media_player.living_room_main:
 media_player.living_room_zone2:
   friendly_name: Zone 2 Receiver
 !secret address_sensor:
-  friendly_name: !secret name_value
+  friendly_name: Home Value
 binary_sensor.iss:
   friendly_name: ISS  
 light.bedroom_2:
@@ -21,7 +21,6 @@ light.bedroom_2:
   friendly_name: !secret user2
 !secret device_user3:
   friendly_name: !secret user3
-
   
 ########ICONS############
 !secret rooommate_room_light_switch:

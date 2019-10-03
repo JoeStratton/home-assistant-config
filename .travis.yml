@@ -18,4 +18,4 @@ install:
   - pip3 install colorlog
   
 script:
-  - hass -c . --script check_config -f
+  - hass -c . --script check_config
