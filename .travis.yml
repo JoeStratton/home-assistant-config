@@ -4,8 +4,7 @@
 #
 language: python
 
-python:
-  - "3.6"
+python: "3.6.4"
   
 before_install:
   - mv travis_secrets.yaml secrets.yaml
@@ -13,9 +12,11 @@ before_install:
   - HA_VERSION=$(<.HA_VERSION)
   - touch home-assistant_v2.db
   - touch home-assistant.log
+  - touch fake_key.pem
   
 install:
   - pip3 install homeassistant==${HA_VERSION}
+  - pip3 install colorlog
   
 script:
-  - hass -c . --script check_config -f
+  - hass -c config/ --script check_config --info all
