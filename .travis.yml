@@ -2,20 +2,34 @@
 # Simply tests that Home Assistant configuration is valid.
 # @link https://home-assistant.io/docs/ecosystem/backup/backup_github/#step-7-configuration-file-testing
 #
+# language: python
+
+# python: "3.6.4"
+  
+# before_install:
+  # - mv travis_secrets.yaml secrets.yaml
+  # - sudo apt-get install -y libudev-dev
+  # - HA_VERSION=$(<.HA_VERSION)
+  # - touch home-assistant_v2.db
+  # - touch home-assistant.log
+  
+# install:
+  # - pip3 install homeassistant==${HA_VERSION}
+  # - pip3 install colorlog
+  
+# script:
+  # - hass -c . --script check_config
+  
 language: python
 
 python: "3.6.4"
   
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-  - sudo apt-get install -y libudev-dev
   - HA_VERSION=$(<.HA_VERSION)
-  - touch home-assistant_v2.db
-  - touch home-assistant.log
   
 install:
   - pip3 install homeassistant==${HA_VERSION}
-  - pip3 install colorlog
   
 script:
   - hass -c . --script check_config
