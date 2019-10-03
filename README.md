@@ -18,8 +18,6 @@
 </p>
 <hr --- </hr> 
 
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Kingia%20Castle.png" width="125"/>
-
 | Components - Standard | Components - Custom |Network Devices | Automations | Scripts |
 |:---------------------:|:-------------------:|:--------------:|:-----------:|:-------:|
 | 92                    |11                   |83              |39           |34       |
@@ -32,7 +30,7 @@
 |:-------------:|:---------:|:-----:|:--------:|
 |YAML           |24         |18     | 11       |
 
-| [Home Assistant Screenshots](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/HA%20Screenshots) |
+| [Home Assistant Screenshots](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
 | --- |
 | [<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20Screenshots/01.%20Home.png"/>](https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/HA%20Pics/HA%20Screenshots) |
 
