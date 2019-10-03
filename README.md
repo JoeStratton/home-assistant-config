@@ -24,11 +24,11 @@
 
 | Binary Sensors | Cameras | Fans | Lights | Media Players | Plants | Sensors | Switches |
 |:--------------:|:-------:|:----:|:------:|:-------------:|:------:|:-------:|:--------:|
-|169             |8        |5     |10       |10             |16      |754      |64        |
+|169             |8        |5     |10       |10             |0      |754      |64        |
 
 | Lovelace Mode | Resources | Views | Webhooks |
 |:-------------:|:---------:|:-----:|:--------:|
-|YAML           |24         |18     | 11       |
+|YAML           |24         |19     | 11       |
 
 | [Home Assistant Screenshots](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
 | --- |
