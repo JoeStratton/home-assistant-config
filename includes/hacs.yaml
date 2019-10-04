@@ -1,1 +1,3 @@
 token: !secret hacs_token
+options:
+  experimental: true

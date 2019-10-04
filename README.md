@@ -28,7 +28,7 @@
 
 | Lovelace Mode | Resources | Views | Webhooks |
 |:-------------:|:---------:|:-----:|:--------:|
-|YAML           |24         |19     | 11       |
+|YAML           |24         |9     | 11       |
 
 | [Home Assistant Screenshots](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
 | --- |
