@@ -9,6 +9,24 @@ cards:
       - entity: cover.garage_door
     show_header_toggle: false
     type: entities
+  - type: vertical-stack
+    cards:
+      - type: 'custom:garbage-collection-card'
+        entity: sensor.waste
+        icon_size: 35px
+        icon_color: black
+        hide_date: true
+      - type: 'custom:garbage-collection-card'
+        entity: sensor.recycle
+        icon_size: 35px
+        icon_color: green
+        hide_date: true
+      - type: 'custom:garbage-collection-card'
+        entity: sensor.bulk
+        icon_size: 35px
+        icon_color: '#996633'
+        hide_date: false
+    title: ''
   - type: 'custom:simple-thermostat'
     entity: climate.upstairs
     step_size: 1   
@@ -25,8 +43,8 @@ cards:
         icon: 'mdi:fan'   
   - camera_image: camera.front_door
     entities:
-      - binary_sensor.ring_front_door_motion
-      - binary_sensor.ring_front_door_ding
+      - binary_sensor.front_door_motion
+      - binary_sensor.front_door_ding
     title: Front Door
     type: picture-glance
   - cards:

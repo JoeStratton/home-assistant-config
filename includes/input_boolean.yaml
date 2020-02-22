@@ -31,4 +31,9 @@ theater_music:
 theater_shield:
   name: Theater Shield
   initial: off
-  icon: mdi:television-play  
+  icon: mdi:television-play
+
+trash_notify:
+  name: Trash Day
+  initial: off
+  icon: mdi:trash-can-outline

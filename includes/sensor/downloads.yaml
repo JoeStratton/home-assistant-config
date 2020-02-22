@@ -28,20 +28,20 @@
   -  download_speed
   -  upload_speed
    
-- platform: nzbget
-  host: !secret unjoe_ip
-  port: 6789
-  name: NZBGet
-  username: !secret joe_user
-  password: !secret nzbget_password
-  monitored_variables:
-   - average_download_rate
-   - download_rate
-   - download_size
-   - remaining_size
-   - uptime 
-   - post_paused
-   - download_paused
-   - article_cache
+#- platform: nzbget
+#  host: !secret unjoe_ip
+#  port: 6789
+#  name: NZBGet
+#  username: !secret joe_user
+#  password: !secret nzbget_password
+#  monitored_variables:
+#   - average_download_rate
+#   - download_rate
+#   - download_size
+#   - remaining_size
+#   - uptime 
+#   - post_paused
+#   - download_paused
+#   - article_cache
   
 

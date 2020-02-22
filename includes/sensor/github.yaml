@@ -4,6 +4,4 @@
     - path: pkozul/lovelace-floorplan
     - path: mike-grant/haaska
     - path: tsightler/ring-alarm-mqtt
-    - path: keatontaylor/alexa_media_player
-    - path: home-assistant/home-assistant
 

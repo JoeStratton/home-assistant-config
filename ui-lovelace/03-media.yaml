@@ -605,14 +605,14 @@ cards:
             title: ''
             image_style: fanart
             hide_empty: true
-      - type: custom:fold-entity-row
-        head:
-          type: section
-          label: NZBGet
-        items:
-          - sensor.nzbget_speed
-          - sensor.nzbget_average_speed
-          - sensor.nzbget_queue_size
+#      - type: custom:fold-entity-row
+#        head:
+#          type: section
+#          label: NZBGet
+#        items:
+#          - sensor.nzbget_speed
+#          - sensor.nzbget_average_speed
+#          - sensor.nzbget_queue_size
       - type: custom:fold-entity-row
         head:
           type: section

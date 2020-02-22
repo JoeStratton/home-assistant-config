@@ -18,7 +18,7 @@ frontend:
 http:
   base_url: !secret url
   ip_ban_enabled: true
-  login_attempts_threshold: 99
+  login_attempts_threshold: 5
 
 customizer:
   custom_ui: local
@@ -39,19 +39,20 @@ climate: !include includes/climate.yaml
 tplink: !include includes/tplink.yaml
 hue: !include includes/hue.yaml
 august: !include includes/august.yaml
-ring: !include includes/ring.yaml
 nest: !include includes/nest.yaml
 light: !include includes/light.yaml
-google: !include includes/google.yaml
 alexa_media: !include includes/alexa_media.yaml
 mqtt: !include includes/mqtt.yaml
 hacs: !include includes/hacs.yaml
 alexa: !include includes/alexa.yaml
 input_boolean: !include includes/input_boolean.yaml
 modernforms: !include includes/modernforms.yaml
+garbage_collection: !include includes/garbage.yaml
 
 map:
 sun:
 ffmpeg:
 config:
+history:
+mobile_app:
 

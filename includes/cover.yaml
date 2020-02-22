@@ -1,6 +1,6 @@
 - platform: myq
-  username: !secret craftsman_username
-  password: !secret craftsman_password
+  username: !secret myq_username
+  password: !secret myq_password
   type: craftsman
   # icon_template:
     # '{% if (states.cover.garage_door.state) == "closed" %}

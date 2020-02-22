@@ -1,6 +1,6 @@
 resources:
 #HACS#
-  - url: /local/community/compact-custom-header/compact-custom-header.js
+  - url: /community_plugin/custom-header/custom-header.js
     type: module
   - url: /local/community/weather-card/weather-card.js
     type: module
@@ -24,6 +24,12 @@ resources:
     type: module
   - url: /local/community/light-entity-row/light-entity-row.js
     type: js
+  - url: /community_plugin/garbage-collection-card/garbage-collection-card.js
+    type: module
+  - url: /community_plugin/button-card/button-card.js
+    type: module
+  - url: /community_plugin/lovelace-animated-background/animated-background.js
+    type: module
 #LOCAL#    
   - url: /local/custom_ui/floorplan/floorplan-card.js?v=1.1.14
     type: module 
@@ -39,20 +45,9 @@ resources:
     type: js
 title: !secret name
 
-cch:
-  swipe: true
-  swipe_amount: 15
-  swipe_animate: none #none/swipe/fade/flip
-  swipe_wrap: true
-  swipe_prevent_default: false #stop default swipe action on device_tracker
-  menu: overflow
-  notifications: overflow
-  voice: hide
-  options: clock
-  clock_format: 12
-  clock_am_pm: false
+custom_header:
+  compact_mode: true
   default_tab: 0
-  clock_date: false
   exceptions:
     - conditions:
         user: !secret user2
@@ -62,5 +57,16 @@ cch:
         user: !secret user3
       config:           
         hide_tabs: 3,4
+
+# animated_background:
+  # default_url: /community_plugin/lovelace-animated-background/background-animations/sunny.html
+  # entity: "weather.dark_sky"
+  # state_url:
+      # 'sunny': /community_plugin/lovelace-animated-background/background-animations/sunny.html
+      # 'partlycloudy': /community_plugin/lovelace-animated-background/background-animations/cloudy.html
+      # 'cloudy': /community_plugin/lovelace-animated-background/background-animations/cloudy.html
+      # 'mostlycloudy': /community_plugin/lovelace-animated-background/background-animations/mostlycloudy.html
+      # 'clear-night': /community_plugin/lovelace-animated-background/background-animations/night.html
+      # 'fog': /community_plugin/lovelace-animated-background/background-animations/fog.html
         
 views: !include_dir_list ui-lovelace/

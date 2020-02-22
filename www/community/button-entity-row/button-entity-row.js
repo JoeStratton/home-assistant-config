@@ -1,4 +1,6 @@
-import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-element.js?module"
+const LitElement = Object.getPrototypeOf(customElements.get("hui-view"))
+const html = LitElement.prototype.html
+const css = LitElement.prototype.css
 
 class ButtonEntityRow extends LitElement {
   static get properties() {
@@ -33,6 +35,9 @@ class ButtonEntityRow extends LitElement {
       }
       .button-inactive {
         color: var(--paper-item-icon-color);
+      }
+      .button-unavailable {
+        color: var(--state-icon-unavailable-color);
       }
     `
   }
@@ -86,16 +91,16 @@ class ButtonEntityRow extends LitElement {
         let button =
           typeof item === "string"
             ? {
-              entityId: item,
-              icon: undefined,
-              stateIcons: undefined,
-              stateStyles: undefined,
-              stateIconStyles: undefined,
-              style: undefined,
-              iconStyle: undefined,
-              name: undefined,
-              service: undefined,
-              serviceData: undefined
+                entityId: item,
+                icon: undefined,
+                stateIcons: undefined,
+                stateStyles: undefined,
+                stateIconStyles: undefined,
+                style: undefined,
+                iconStyle: undefined,
+                name: undefined,
+                service: undefined,
+                serviceData: undefined
               }
             : {
                 entityId: item.entity,
@@ -203,6 +208,8 @@ class ButtonEntityRow extends LitElement {
         return "button-active"
       case "off":
         return "button-inactive"
+      case "unavailable":
+        return "button-unavailable"
       default:
         return "button-default"
     }

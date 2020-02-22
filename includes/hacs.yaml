@@ -1,3 +1,5 @@
 token: !secret hacs_token
-options:
-  experimental: true
+theme: true
+sidepanel_title: "HACS"
+# options:
+  # experimental: true

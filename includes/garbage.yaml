@@ -1,0 +1,20 @@
+sensors:
+- name: Waste # Each week on Monday. No collection on Christmas
+  frequency: "weekly"
+  collection_days:
+  - mon
+  exclude_dates:
+  - '2020-12-25'
+- name: Recycle # Each week on Monday. No collection on Christmas
+  frequency: "weekly"
+  collection_days:
+  - mon
+  exclude_dates:
+  - '2020-12-25'
+- name: Bulk
+  frequency: "every-n-weeks"
+  collection_days: "mon"
+  verbose_state: False
+  period: 6
+  first_week: 5
+  first_month: "jan"
