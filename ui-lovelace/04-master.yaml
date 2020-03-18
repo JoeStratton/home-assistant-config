@@ -23,3 +23,34 @@ cards:
     show_header_toggle: false
     title: ''
     type: entities
+  - cards:
+      - type: button
+        name: TV
+        state_color: false
+        icon: 'mdi:power' 
+        tap_action:
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.bedroom_tv_power
+      - type: button
+        name: Volume Up
+        state_color: false
+        icon: 'mdi:volume-plus' 
+        tap_action:
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.bedroom_tv_volume_up
+      - type: button
+        name: Volume Down
+        state_color: false
+        icon: 'mdi:volume-minus' 
+        tap_action:
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.bedroom_tv_volume_down
+    type: horizontal-stack
+    title: ''
+    

@@ -37,3 +37,10 @@ trash_notify:
   name: Trash Day
   initial: off
   icon: mdi:trash-can-outline
+
+dark_mode:
+  name: Dark mode
+  icon: mdi:theme-light-dark
+
+theme_alternative:
+  name: Theme alternative (enable active state color)

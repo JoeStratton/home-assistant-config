@@ -13,7 +13,7 @@ homeassistant:
 
 frontend:
   javascript_version: latest
-  themes: !include_dir_merge_named includes/themes/
+  themes: !include_dir_merge_named themes
 
 http:
   base_url: !secret url
@@ -46,8 +46,10 @@ mqtt: !include includes/mqtt.yaml
 hacs: !include includes/hacs.yaml
 alexa: !include includes/alexa.yaml
 input_boolean: !include includes/input_boolean.yaml
+input_select: !include includes/input_select.yaml
 modernforms: !include includes/modernforms.yaml
 garbage_collection: !include includes/garbage.yaml
+#automation: !include automations/frontend.yaml
 
 map:
 sun:

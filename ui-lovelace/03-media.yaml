@@ -306,7 +306,7 @@ cards:
         card:
           type: custom:mini-media-player
           entity: media_player.living_room_zone2
-          name: Turn On Zone 2
+          name: Zone 2
           hide:
             icon: true 
         #non party mode            
@@ -549,26 +549,26 @@ cards:
                   border: solid 3px rgba(118,185,0,1);
                   box-shadow: 3px 3px rgba(0,0,0,0.4);
                 }      
-  - type: custom:vertical-stack-in-card
-    cards:
-      - entities:
-          - type: 'custom:button-entity-row'
-            buttons:
-              - entity: switch.bedroom_tv_power
-                icon: 'mdi:power'
-                style:
-                  - color: var(--primary-color)
-              - entity: switch.bedroom_tv_volume_up
-                icon: 'mdi:volume-plus'
-                style:
-                  - color: var(--primary-color)
-              - entity: switch.bedroom_tv_volume_down
-                icon: 'mdi:volume-minus'
-                style:
-                  - color: var(--primary-color)
-        show_header_toggle: false
-        type: entities 
-        title: 'Bedroom'
+  # - type: custom:vertical-stack-in-card
+    # cards:
+      # - entities:
+          # - type: 'custom:button-entity-row'
+            # buttons:
+              # - entity: switch.bedroom_tv_power
+                # icon: 'mdi:power'
+                # style:
+                 # - color: var(--primary-color)
+              # - entity: switch.bedroom_tv_volume_up
+                # icon: 'mdi:volume-plus'
+                # style:
+                  # - color: var(--primary-color)
+              # - entity: switch.bedroom_tv_volume_down
+                # icon: 'mdi:volume-minus'
+                # style:
+                  # - color: var(--primary-color)
+        # show_header_toggle: false
+        # type: entities 
+        # title: 'Bedroom'
   - entities:
       - type: custom:fold-entity-row
         head:

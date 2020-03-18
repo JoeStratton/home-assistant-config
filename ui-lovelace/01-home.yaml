@@ -5,6 +5,14 @@ path: default_view
 background: var(--background-image)
 cards:
   - entities:
+      - entity: sensor.us_confirmed
+      - entity: sensor.us_recovered
+      - entity: sensor.us_deaths
+      - entity: sensor.us_current
+    show_header_toggle: false
+    type: entities
+    title: 'Corona Virus'
+  - entities:
       - entity: lock.front_door
       - entity: cover.garage_door
     show_header_toggle: false
