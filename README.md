@@ -17,19 +17,19 @@
   <img src="https://travis-ci.org/JoeStratton/home-assistant-config.svg?branch=master"/>
 </p>
 <hr --- </hr> 
-
+<!--
 | Components - Standard | Components - Custom |Network Devices | Automations | Scripts |
 |:---------------------:|:-------------------:|:--------------:|:-----------:|:-------:|
-| 92                    |11                   |83              |39           |34       |
+| 0                   |2                   |83              |39           |34       |
 
 | Binary Sensors | Cameras | Fans | Lights | Media Players | Plants | Sensors | Switches |
 |:--------------:|:-------:|:----:|:------:|:-------------:|:------:|:-------:|:--------:|
-|169             |8        |5     |10       |10             |0      |754      |64        |
+|0               |8        |2     |14      |3             |0        |3        |64        |
 
 | Lovelace Mode | Resources | Views | Webhooks |
 |:-------------:|:---------:|:-----:|:--------:|
-|YAML           |24         |9     | 11       |
-
+|YAML           |0         |9     | 0       |
+-->
 | [Home Assistant Screenshots](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
 | --- |
 | [<img src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/HA%20Screenshots/01-home.PNG"/>](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
