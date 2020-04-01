@@ -25,9 +25,10 @@
 <hr --- </hr>
 
 <h3 align="left">Home Assistant Hardware</h3> 
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/i7.png" width="95"/>
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Rasp%20Pi%20Logo.png" width="200"/> 
-<p align="left">I am using a server for this, but I included the raspberry pi logo because that is all you need to get most of this up and running.
+<img src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/i7.png" width="95"/>
+<img src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/Rasp%20Pi%20Logo.png" width="200"/> 
+<img src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/docker.png" width="200"/> 
+<p align="left">I am using a server and Docker for this, but I included the Raspberry Pi logo because that is all you need to get most of this up and running.
 <hr --- </hr>
 
 <h3 align="left">Home Assistant Software</h3>
