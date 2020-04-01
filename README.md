@@ -156,7 +156,7 @@ I also bought a heap of Xiaomi Miji 1080p IP Cameras thinking they could be hack
 <h3 align="left">My Favourite Projects</h3> 
 
 <p align="left">I used the below links for intergration into my own HA or I plan to at some point in the future.</p>
-<br>
+- [Alexa as a Media Player](https://community.home-assistant.io/t/echo-devices-alexa-as-media-player-testers-needed/58639)<br>
 <a>**More to come as I can remember them**<a name="bottom" href="https://github.com/JoeStratton/home-assistant-config/blob/master/README.md"><img align="right" border="0" src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/Back%20to%20the%20Top.png" width="45" ></a><br>
 <hr --- </hr>
 <hr --- </hr>
