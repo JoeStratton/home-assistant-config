@@ -382,6 +382,6 @@ I also bought a heap of Xiaomi Miji 1080p IP Cameras thinking they could be hack
 [Better Looking Device Tracker](https://community.home-assistant.io/t/better-looking-device-tracker/27281)<br>
 [Alexa as a Media Player](https://community.home-assistant.io/t/echo-devices-alexa-as-media-player-testers-needed/58639)<br>
 [Zoned Cleaning Xiaomi](https://community.home-assistant.io/t/howto-xiaomi-vacuum-zoned-cleaning/51293)<br>
-<a>**More to come as I can remember them**<a name="bottom" href="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/README.md#kingia-castle-smart-home-configuration"><img align="right" border="0" src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Back%20to%20the%20Top.png" width="45" ></a><br>
+<a>**More to come as I can remember them**<a name="bottom" href="https://github.com/JoeStratton/home-assistant-config/blob/master/README.md"><img align="right" border="0" src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/Back%20to%20the%20Top.png" width="45" ></a><br>
 <hr --- </hr>
 <hr --- </hr>
