@@ -32,9 +32,6 @@
 <hr --- </hr>
 
 <h3 align="left">Home Assistant Software</h3>
-| [Mosquitto MQTT Broker](https://www.home-assistant.io/addons/mosquitto/) | [Node-RED](https://github.com/notoriousbdg/hassio-addons/tree/master/node-red) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20logo.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Mosquitto%20MQTT%20Logo.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/appdaemon.PNG" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Node-RED%20Logo.png" width="250"/> |
 
 <h4 align="left">Home Assistant:</h4>
 <p align="left">You have a few options to install home assistant. There is a standalone OS called Hass.IO as well as the application home assistant. Both do the same thing, hass.io does have a built in package manager and a few other things as well. This build uses a docker container and the core application, not hass.io</p>
