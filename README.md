@@ -156,15 +156,7 @@ I also bought a heap of Xiaomi Miji 1080p IP Cameras thinking they could be hack
 <h3 align="left">My Favourite Projects</h3> 
 
 <p align="left">I used the below links for intergration into my own HA or I plan to at some point in the future.</p>
-
-[HA UI Themes](https://community.home-assistant.io/t/share-your-themes/22018/100)<br>
-[Custom UI Tiles](https://community.home-assistant.io/t/share-your-themes/22018/100)<br>
-[Sonoff-HA](https://community.home-assistant.io/t/sonoff-homeassistant-alternative-firmware-for-sonoff-switches-for-use-with-mqtt-ha/2332/308)<br>
-[Spotify Playlist Player](https://community.home-assistant.io/t/spotify-playlist-player/22491/67)<br>
-[MQTT Alarm Panel](https://community.home-assistant.io/t/mqtt-alarm-control-panel-for-raspberry-pi-and-android/26484)<br>
-[Better Looking Device Tracker](https://community.home-assistant.io/t/better-looking-device-tracker/27281)<br>
-[Alexa as a Media Player](https://community.home-assistant.io/t/echo-devices-alexa-as-media-player-testers-needed/58639)<br>
-[Zoned Cleaning Xiaomi](https://community.home-assistant.io/t/howto-xiaomi-vacuum-zoned-cleaning/51293)<br>
+<br>
 <a>**More to come as I can remember them**<a name="bottom" href="https://github.com/JoeStratton/home-assistant-config/blob/master/README.md"><img align="right" border="0" src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/Back%20to%20the%20Top.png" width="45" ></a><br>
 <hr --- </hr>
 <hr --- </hr>
