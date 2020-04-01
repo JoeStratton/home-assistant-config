@@ -17,31 +17,13 @@
   <img src="https://travis-ci.org/JoeStratton/home-assistant-config.svg?branch=master"/>
 </p>
 <hr --- </hr> 
-<!--
-| Components - Standard | Components - Custom |Network Devices | Automations | Scripts |
-|:---------------------:|:-------------------:|:--------------:|:-----------:|:-------:|
-| 0                   |2                   |83              |39           |34       |
---><!--
-| Binary Sensors | Cameras | Fans | Lights | Media Players | Plants | Sensors | Switches |
-|:--------------:|:-------:|:----:|:------:|:-------------:|:------:|:-------:|:--------:|
-|0               |8        |2     |14      |3             |0        |3        |64        |
---><!--
-| Lovelace Mode | Resources | Views | Webhooks |
-|:-------------:|:---------:|:-----:|:--------:|
-|YAML           |0         |9     | 0       |
--->
+
 | [Home Assistant Screenshots](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
 | --- |
 | [<img src="https://github.com/JoeStratton/home-assistant-config/blob/master/HA%20Pics/HA%20Screenshots/01-home.PNG"/>](https://github.com/JoeStratton/home-assistant-config/tree/master/HA%20Pics/HA%20Screenshots) |
 
 <hr --- </hr>
-<!--
-### Smart Home Hardware Topology
-<p align="center">
-  <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20Topo%202.png"/>
-</p>
-<hr --- </hr>
--->
+
 <h3 align="left">Home Assistant Hardware</h3> 
 <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/i7.png" width="95"/>
 <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Rasp%20Pi%20Logo.png" width="200"/> 
