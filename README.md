@@ -34,13 +34,7 @@
 <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20logo%202%20.png" width="200"/>
 <p align="left">Lately I have started to notice the automations becoming sluggish and this is due to the resources of my HA Server becoming occupied with background tasks like device tracking and sensor polling. With the recent release of HASSIO on its new operating system HASSOS I decided now was a good time to upgrade and splinter my automations off my main HA instance onto a dedicated RPi. Splitting my HA tasks across 3 Pis has made a huge difference and my automations have become snappy again whilst all my sensors can run in the background not effecting the performance of my essential tasks. I used the MQTT Statestream to keep all the Pis insync with each other. I have used Hassio with standard Add-On store packages which include Appdaemon for use with HaDashboard, Mosquitto Broker for MQTT Broker & Node-RED for more complex Automation flows. I have now installed a stand alone RPi with Grafana, InfluxDB and Node-RED to take the strain off resources on my HA device and to also have access to a larger hdd for database storage. My config in this repo is a combination of all my Pi's as if you were running it all of the same device to save confusion message me if you would like more info on how I splintered off the automations to a dedicated device.</p>
 
-<p align="left">*** I have now moved across to using an Intel Nuc i7 running Ubuntu Server with HASSIO in a docker. This move has been amazing and the install from start to finsih took no more then 30-40mins. I still run seperate pi for MQTT Broker but have moved my Automations onto the Nuc with Node-RED also running in a docker container. My reboot times are down to 55s even with alot more being thrown at it great move and I highly recommend it if you can justify outlaying more coin for you HA server.</p>
-<p align="center">
-  <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20Device%20Topo%203.png"/>
-</p>
-<hr --- </hr>
-
-| [Hass.io](https://www.home-assistant.io/hassio/installation/) | [Mosquitto MQTT Broker](https://www.home-assistant.io/addons/mosquitto/) | [AppDaemon - HADashboard](https://www.home-assistant.io/docs/ecosystem/appdaemon/) | [Node-RED](https://github.com/notoriousbdg/hassio-addons/tree/master/node-red) |
+| [Hass.io](https://www.home-assistant.io/hassio/installation/) | [Mosquitto MQTT Broker](https://www.home-assistant.io/addons/mosquitto/) | [Node-RED](https://github.com/notoriousbdg/hassio-addons/tree/master/node-red) |
 | --- | --- | --- | --- |
 | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/HA%20logo.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Mosquitto%20MQTT%20Logo.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/appdaemon.PNG" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Node-RED%20Logo.png" width="250"/> |
 
@@ -51,10 +45,6 @@
 
 One of the first things I needed to do once I got HA up and running was to setup a MQTT Broker, I decided to use [CloudMQTT](https://www.cloudmqtt.com/) as I found this helpful guide from [BRUH](https://www.youtube.com/watch?v=VaWdvVVYU3A) and was up and running in 15mins. The main problem I had with this method was using a cloud-based service to control my MQTT based light switches. I decided to install Mosquitto Broker from the Hass.io Add-On Store. Doing this means I can host the MQTT Broker locally therefore having control of who can access my devices and data.
 
-<h4 align="left">AppDaemon3 - HADashboard:</h4>
-
-I have a bunch of wall mounted tablets (Android & IOS) as well as RPi with 7" touchscreens and whilst I like the standard HA UI there is way too much going on for my wife and guests who need to interact with the smart home system. In cometh HADashboard, it wraps up your basic controls (lights, cooling, heating, music etc) into nice looking widgets that make using the smart home controls a breeze for any non-tech person in the house (everyone but me). 
-
 <h4 align="left">Node-RED:</h4>
 
 After using HA for a few months, I began to really enjoy the sometimes-complicated methods of using automations, I also came to realise some of the limitations in its implementations. I found a good repo with an easy to follow installation guide by [NotoriousBDG](https://github.com/notoriousbdg/hassio-addons/tree/master/node-red) this handles any of my more complicated flows and conditioning required for my Automations.
@@ -62,46 +52,21 @@ After using HA for a few months, I began to really enjoy the sometimes-complicat
 <hr --- </hr>
 <hr --- </hr>
 
-<h3 align="left">Kingia Castle Network</h3>
+<h3 align="left">unJoe Network</h3>
 <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Network%20Topo.png"/>
 <p align="left">My Internet is a 100/40Mb/s FTTN solution where the fibre is terminated about 50m up the road and travels down phones lines (VDSL2+) for the remainder I typically achieve speeds of 92/35Mb/s. The core of my network switching devices are made up of Mikrotik Cloud Router Series, whilst my wireless network is comprised of both Altai and UBNT devices. I use a VPN and isolate my Smart Home devices from my Personal and Guest access networks through VLAN's and client isolation is implemented on the guest network.</p>
 <hr --- </hr>
 
-| [Core Router](https://mikrotik.com/product/CCR1009-7G-1C-PC) | [Core Switch](https://mikrotik.com/product/CRS125-24G-1S-IN) | [Upstairs Switch](https://mikrotik.com/product/CRS106-1C-5S) | [Cabling]() |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/CCR1009.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/CRS-125.jpg" width="350"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/CRS106.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Cabling.png" width="350" height="250"/> |
-
-| [Altai A2c Dual-Band Access Point](https://www.powertec.com.au/altai-a2c-indoor-dual-band-2x2-802-11ac-ap-ceiling-mount) | [UBNT NanoBeam AC 5Ghz GEN2 19DBi](https://www.powertec.com.au/ubiquiti-nanobeam-ac-5ghz-gen2-19dbi-450mbps) | [UBNT NanoBeam AC 5Ghz GEN2 16DBi](https://www.powertec.com.au/ubiquiti-nanobeam-ac-5ghz-16dbi-450mbps) | [Network Management Tools]() |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Altai-A2c.jpg" width="300"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Nano-19-AC.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Nano-19-AC.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Network%20Manage.png" width="350" height="250"/> |
-
-<h4 align="left">Core Router:</h4>
-<p align="left">My Core Router handles my PPPoE authentication, NAT and firewall rules. All my remote access is handled by a build it Cloud DNS service on the Mikrotik Router along with an extensive list of non-standard port forwards to gain access to every device I can remotely. I previously used the Mikrotik Device Tracker platform for online/offline status but found the response time too long so instead now use the Ping platform for device status monitoring.</p>
-<h4 align="left">Core Switch:</h4>
-<p align="left">My Core Switch is just a managed GBit Switch all my ethernet connected devices connect to this via Cat6 in wall Cabling into Cat6 Wall plates and all use Cat6 Patch Cables.</p>
-<h4 align="left">Wireless Access:</h4>
-<p align="left">I have 4 SSID one for each of admin access, family access, guest access & smart home device access. I used to run a Cambium cnPilot E400 which I was given by Cambium for testing in a "Conference Environment" it was meant to be able to handle 100 simultaneous YouTube streams well it started to fall over after about 35 connected clients (not streaming anything). Rather than filling the house with several APs I decided to go for the best in the business and am using a single Altai AP which is capable of handling 512 clients (currently have over 70 and still going strong). I only use 2.4G for access and have the 5G radio turned off as I use that spectrum for backhaul.</p>
-<h4 align="left">Wireless PTMP Links:</h4>
-<p align="left">I have a few impossible to cable areas of my 2-storey house (without running external ducting), between upstairs and downstairs and the outer wall of the downstairs area (where my media room is located). I have used a 19DBi UBNT NBE in AP mode connected directly to my Core Switch which links on 40Mhz channel to a unit in my media room and another upstairs which feed into a Mikrotik switch that connects any ethernet devices upstairs.</p>
-<h4 align="left">Network Management:</h4>
-<p align="left">I use Mikrotik for network configuration due to its highly configurable nature but it has a steep learning curve. I use these as I have been working with the product for over 12 years and am comfortable with it. I use winbox to access Mikrotik devices and prefer to do any configurations via the CLI, but the products do have a Web UI which is usable for most functions.</br> 
-
 UBNT devices are configured by their Web UI and then managed by a CRM Point Device (overkill for 3 devices) they have been set and forget with only firmware upgrades performed if they address any security patches.</br> 
-
-Altai AP is configured by its Web UI, these are commercial APs and are not designed with end users in mind. The UI is unpolished and hard to navigate if you don’t understand wireless and it is meant for wireless networking engineers. It is again highly configurable although there is nothing special here just 4 SSID (capable of up to 32) and VLAN tagging for each.</br>
-
-The big bonus with Altai is their antenna design and ability to cover a great distance with a single AP and the amount of simultaneous connected clients it can handle. In my place so far, I have tried Mikrotik (coverage is poor due to low power and antenna design), UBNT (poor client handling and very susceptible to interference), Cambium (poor coverage and client handling was better than UBNT but not enough), Ruckus (great coverage poor client and roaming handover without controller)</p>
-<hr --- </hr>
-<hr --- </hr>
 
 <h3 align="left">Voice Control & TTS</h3> 
 <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/alexa.png" width="150"/> 
 <p align="left">The voice control war has only just hit Australian shores, I dipped my toes into the Alexa waters a few years back with the original Echo and it was a bit of a flop due to nothing being supported in Australia. Once I moved to HA and its Amazon cloud component I dusted off the Echo and now have voice control over a majority of my Smart Home.</p>
 <hr --- </hr>
 
-| [Amazon Echo](https://www.jbhifi.com.au/amazon/amazon-echo-plus-with-bonus-philips-hue-bulb-edison/574929/) | [Amazon Echo Dot](https://www.jbhifi.com.au/amazon/amazon-echo-dot-2nd-generation-black/574910/) | [Kodi TTS](https://www.home-assistant.io/components/notify.kodi/) | [Lannouncer](https://www.home-assistant.io/components/notify.lannouncer/) |
+| [Amazon Echo](https://www.jbhifi.com.au/amazon/amazon-echo-plus-with-bonus-philips-hue-bulb-edison/574929/) | [Amazon Echo Dot](https://www.jbhifi.com.au/amazon/amazon-echo-dot-2nd-generation-black/574910/) | [Kodi TTS](https://www.home-assistant.io/components/notify.kodi/)
 | --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Amazon%20-%20Echo.png" height="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Amazon%20-%20Dot.png" width="200"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Kodi%20Logo%202.png" width="200"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Google%20TTS.png" width="200"/> |
+| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Amazon%20-%20Echo.png" height="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Amazon%20-%20Dot.png" width="200"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Kodi%20Logo%202.png" width="200"/> | 
 
 <h4 align="left">Voice Control:</h4>
 <p align="left">I use a combination of Amazon Echo and Echo Dot's in conjunction with HA Cloud with its Alexa Integration to enable voice control over most functions in the house. My wife hates the voice control (she wants to be the only female voice of control in our house), but my young boys love it.</p>
@@ -118,49 +83,6 @@ The big bonus with Altai is their antenna design and ability to cover a great di
 * Reoccurring Events - Reminder msg to take out bins night before rubbish collection day, with alt msg for recycling week</br>
 * Warning Events - Notify of Alarm Trigger, Arming, Outdoor Motion, Smoke/C02 Detection</br>
 * Automation Notify - Notify on certain Automation runs like when sun is above horizon and lights are still on I turn them off &nbsp; &nbsp; and have TTS play a message "I guess I better turn the lights off or Tina will leave them on all day"
-<hr --- </hr>
-<hr --- </hr>
-
-<h3 align="left">Gateways</h3> 
-
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Logo.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/SmartThings%20Logo.png" width="200"/> |
-| --- | --- |
-
-At the moment the majority of my sensors are Xiaomi, so I need to use their Gateway to integrate them with HA. I also have a Smart Things Hub which I will use to connect any Z-Wave devices. I would prefer to move away from third party cloud-based Gateways such as the 2 above, I am following this [thread](https://community.home-assistant.io/t/zigbee2mqtt-getting-rid-of-your-proprietary-zigbee-bridges-xiaomi-hue-tradfri/52108) with interest currently and plan to move over to this platform removing the need to use the Xiaomi Gateway altogether.
-
-<hr --- </hr>
-
-| [Xiaomi Gateway](https://www.banggood.com/Original-Xiaomi-Upgrade-Smart-Home-WiFi-Remote-Control-Multi-functional-Gateway-p-1047282.html?rmmds=search) | [Zigbee](http://www.zigbee.org/what-is-zigbee/) | [SmartThings Hub](https://www.amazon.com/Samsung-SmartThings-Smart-Home-Hub/dp/B010NZV0GE) | [Z-Wave](http://www.z-wave.com/) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Gateway.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Zigbee.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Samsung-Smart-Hub-1.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/ZWave.png" width="250"/> |
-
-<h4 align="left">Zigbee Gateway:</h4>
-<p align="left">As stated above I use the Xiaomi Gateway as a bridge for all of my Xiaomi family of Zigbee and Wi-FI based sensors into HA. It has a not so friendly to use App and all spoken commands are in Chinese. It does intergrate with its ecosystem ok, with support for using its switches as door bells and playing a sound it also has a rgb led which will change colours on events like smoke detection it turns red or alarm trigger.</p>
-<h4 align="left">Z-Wave Gateway:</h4>
-<p align="left">I bought a Smart Things Hub at the same time I purchased my Echo whilst I was in the USA, I had intended to use it as the bases of my smart home but once again there was no support for the Australian market at the time and there still is no word of it being released here. I keep it around as one of the things on my list still to integrate is my front door lock and the security protocols on most Door locks don’t work directly with HA, but they will with Smart Things. Also, most door locks seem to use Z-Wave protocol, the frequencies for Z-Wave differ for Australia from the USA (here in Australia that part of the spectrum is used by a cellular carrier), so I will need to change it anyway. So, now it’s a white brick occupying space in my data rack and network I am hoping I can find a decent Wi-Fi/Bluetooth Door lock and can do away with it altogether.</p>
-<hr --- </hr>
-<hr --- </hr>
-
-<h3 align="left">Sensors</h3> 
-
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Logo.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20Logo.png" width="200"/> |
-| --- | --- |
-
-<p align="left">My first foray into the home sensor market was with Sonoff, they needed to be hacked to use them with HA and I found them not very accurate. I found a lot of chatter on the HA Forums about these cheap sensors out of China that not only integrated well with HA they worked well also. Xioami are a kind of supermarket of many products some of which they wrap up into their smart device eco system called Mi. These devices can be purchased from a few sites the best I found was Banggood and GearBest, there shipping was quick on most things and their packaging is professional, so items are well protected.</p>
-<hr --- </hr>
-
-| [Motion Detector](https://www.banggood.com/Original-Xiaomi-Smart-Home-Aqara-Human-Body-Sensor-ZigBee-Wireless-Connection-7m-Detection-Distance-p-1177007.html?rmmds=detail-top-buytogether-auto__2&cur_warehouse=CN) | [Door & Window Sensor](https://www.banggood.com/Original-Xiaomi-Intelligent-Door-Window-Sensor-Control-Smart-Home-Suit-Kit-Accessory-p-1017541.html?rmmds=detail-top-buytogether-auto__3&cur_warehouse=CN) | [Smart Switches](https://www.banggood.com/Original-Xiaomi-Smart-Home-Suit-Accessories-Mini-Smart-Wireless-Switch-Button-p-1049175.html?rmmds=detail-top-buytogether-auto__4&cur_warehouse=CN) | [Temperature Sensor](https://www.banggood.com/New-Arrival-Original-Xiaomi-Aqara-Intelligent-Smart-Home-Temperature-Humidity-Sensor-Set-White-p-1148666.html?rmmds=detail-top-buytogether-auto__5) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Motion%20Sensor.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Door%20Sensor.jpeg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Smart%20Switches.png" width="200" height="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Temp%20Sensor.jpg" width="250"/> |
-
-<h4 align="left">Motion Sensors:</h4>
-<p align="left">I have placed motion sensors in every room of my house as well as at the entrance to my property (facing the front door) and a few at the rear. I use external sensors as motion light sensors they turn on the front and rear lights upon motion detect. The interior ones in the playroom, laundry and bathrooms are also used to turn lights on and off with motion as I found my family just leave these lights on all day. I also use them for unauthorized motion detection once the alarm has been set to trigger TTS to warn intruder that alarm has been triggered and to get the f*** out as police have been notified, as well as set in motion the alarm sequence. I hope to start to also utilize these in conjunction with other methods to introduce room detection/presence.</p>
-<h4 align="left">Door & Window Sensors:</h4>
-<p align="left">I have placed Door & Window Sensors on everything that opens & shuts that I want to know the status of. I use these tell me if there is an open door/window when we are trying to arm the alarm, if there is, a notification is played over the speakers to tell me "X" window is still open would you still like to set the alarm. They are also used to alert of unauthorized access and set in motion alarm sequence if its armed.</p>
-<h4 align="left">Smart Switches:</h4>
-<p align="left">I have a few of these around the place and a bunch more waiting to find a use for. The reason I got these was once I connected the ceiling fans to a 4ch Sonoff (more on these later) I disconnected the wall switch for the fans. This drove my wife crazy having to turn the fans on and off via her phone (lots of swearing and you need to rip this f*&^%$# smart home crap out), so I purchased about 10 or so of these Xiaomi Smart Switches. I use them to on single click cycle which upon a single click, it cycles through increasing the fan speeds and last one turns it off. I also use one at the entrance as a door bell which is used in several automations one for recording of ip camera and displaying it on the alarm panel screen by the front door. If we are watching TV/Movie it pauses what we are watching (Cable or Kodi) and turns the lights up displays who is at the front door from a snapshot taken with the camera recording. I also have one in the entertainment area for manually turning the (20) Edison bulbs on/off and fairy lighting modes. These switches have single click, double click and long press modes so can be used to trigger several automations of the one unit.</p>
-<h4 align="left">Temperature & Humidity Sensors:</h4>
-<p align="left">I have one of these in every room of the house as well as one located in the entertaining area out the back of the house. I use them mainly to tell me the temperature but do use them to trigger automations around when to turn on the bathroom heating and with a moisture sensor in the shower to trigger the exhaust fan. These are also used to control the climate in the bedrooms of a night time, not really for the main living areas.</p>
 <hr --- </hr>
 <hr --- </hr>
 
