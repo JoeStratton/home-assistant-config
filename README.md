@@ -44,6 +44,8 @@ I use a MQTT server to create a communication bridge between my ring products an
 
 When I started experimenting with automations in Hass I noticed how limited it was. With recent versions they have improved the automation interface extensively and almost any user can figure this out on their own. I still decided to stick with node red which allows a more visiual represetnation of the flows and relies heavily on javascript/yaml/json knowledge.
 
+<a href="https://github.com/JoeStratton/node-red-flows">My Node Red Repo<a>
+
 <hr --- </hr>
 <hr --- </hr>
 
