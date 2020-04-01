@@ -153,34 +153,6 @@ I also bought a heap of Xiaomi Miji 1080p IP Cameras thinking they could be hack
 <p align="left">I have a pretty simple garden irrigation system using a Sonoff Basic and 12V Solenoid Valve. I also have a bunch of Moisture sensors conting back to a Raspberry Pi Zero.</p>
 <hr --- </hr>
 
-| [Sonoff POW](http://sonoff.itead.cc/en/products/sonoff/sonoff-pow) | [12V Solenoid](https://core-electronics.com.au/brass-liquid-solenoid-valve-12v-1-2-npt.html) | [Pi Zero](https://core-electronics.com.au/raspberry-pi-zero-w-starter-kit.html) | [Mi Flora](https://www.banggood.com/Original-Xiaomi-4-in-1-Flower-Plant-Light-Temperature-Tester-Garden-Soil-Moisture-Nutrient-Monitor-p-1068369.html?cur_warehouse=AU) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20POW.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/12V%20Solednoid.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Pi%20Zero.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Mi%20Flora%201.jpg" width="250"/> |
-
-<h4 align="left">Irrigation:</h4>
-<p align="left">I bought a 12V Solenoid Valve and 12V 5A power supply which feeds into a Sonoff POW (with outdoor enclosure), and then into the 12V Solenoid. This feeds into a single hose that runs around my side and back garden beds. It is scheduled to water of an evening in the winter unless moisture sensor is over 20% or rain is forecast for the following 8hr period. In the spring I transition to morning watering and in the summer, it gets really hot here so morning and evening watering.</p>
-<h4 align="left">Plant Monitoring:</h4>
-<p align="left">I bought a bunch of these Mi Flora Plant sensors for monitoring the indoor and plants in pots we have in our entertaining area, as it states they shouldn't be flooded with water. I had a heap left over so I pushed a few into the garden beds also, and they are surprisingly still going strong. I figured for $25 a pop if they don't last then I will get something more suitable, they are accurate enough to decide when not to water the beds I am not growing crops that need to have measurements down to root level. These connect back to a Raspberry Pi Zero W via Bluetooth which I installed the Bluetooth add on and they integrated to HA pretty easily. I then use the HA API to get the Soil Moisture readings displayed into my main HA. I only really monitor Soil Moisture and Salinity as well as battery, but the sensors are equipped with Light and Temperature sensor. I wish to add my own weather station into the mix atm I use the BOM for weather conditions.</p>
-<hr --- </hr>
-<hr --- </hr>
-
-<h3 align="left">My Favourite Resources</h3> 
-
-<p align="left">I used the below links for inspiration, configuration help and I recommend a visit to them if you haven't already.</p>
-
-[CCOSTAN](https://github.com/CCOSTAN/Home-AssistantConfig) - There is a reason this guys Repo is the most starred out there, his Repo layout was an inspiration for me to start this one and you will see a lot of similarities in my layout as a result. Whilst I don't yet use Docker or Floorplan this is the first place I will coming back to once I move in that direction. His use of TTS is awesome and very creative and I took alot of my TTS from this. His whole setup is very impressive and if you haven't already head over to his repo give it a star and get inspired.
-
-[stanvx](https://github.com/stanvx/Home-Assistant-Configuration) - Another I visit regularly is stanvx he uses alot of Xiaomi products and he has really good examples for those looking for automation ideas.
-
-[notoriousbdg](https://github.com/notoriousbdg/hassio-addons) - As mentioned above notoriousbdg has a great repo with add-ons for Node-Red, HA Bridge & Gogs.
-
-[BRUH Automation](https://www.youtube.com/channel/UCLecVrux63S6aYiErxdiy4w) - Great place for video tutorials on HA related guides.
-
-[DrZzs](https://www.youtube.com/channel/UC7G4tLa4Kt6A9e3hJ-HO8ng) - For anyone wanting to use Sonoff switches plenty of useful guides.
-
-[HA Podcast](https://hasspodcast.io/) - I didn't mention above but I have an automation to send me a tasker notification that there is a new HA release, so that the next time I am driving to work I can say "ok google" play the latest home asssitant podcast. Nice way to keep abreast of what changes are coming in the latest release and if there is anything I would like to take advantage of. 
-<hr --- </hr>
-
 <h3 align="left">My Favourite Projects</h3> 
 
 <p align="left">I used the below links for intergration into my own HA or I plan to at some point in the future.</p>
