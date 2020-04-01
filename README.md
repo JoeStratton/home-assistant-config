@@ -86,60 +86,6 @@ UBNT devices are configured by their Web UI and then managed by a CRM Point Devi
 <hr --- </hr>
 <hr --- </hr>
 
-<h3 align="left">Fan & Lighting Control</h3> 
-
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Logo.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20Logo.png" width="200"/> |
-| --- | --- |
-
-<p align="left">I like many others use Sonoff single, daul and 4ch switches to control the power to my lights over Wi-Fi. These units need to be flashed with firmware (plenty of info out there on how to do it, I used Tasmota Firmware). I have placed all of my switches behind the wall plate (Gyprock walls) had to make fairly large holes to accomodate the 4ch model but can always plaster it back up afterwoods(took me about 2 months of nagging to sand the patches and re paint walls).</p>
-<hr --- </hr>
-
-| [Sonoff Basic](http://sonoff.itead.cc/en/products/sonoff/sonoff-basic) | [Sonoff Dual](http://sonoff.itead.cc/en/products/sonoff/sonoff-dual) | [Sonoff 4CH](http://sonoff.itead.cc/en/products/sonoff/sonoff-4ch) | [Sonoff RF Bridge 433](http://sonoff.itead.cc/en/products/appliances/sonoff-rf-bridge-433) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20Basic.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20Dual.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%204ch.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Sonoff%20RF%20Bridge.jpg" width="250"/> |
-
-<h4 align="left">Light Switches:</h4>
-<p align="left">I use the Sonoff Basic & Dual for single and dual wall switches respectively and these are pretty straight forward flashed with Tasmota Firmware and added to HA via the MQTT Switch component. I installed all of these switches behind the existing wall plates and connected the original switch to the available gpio pins on the board.</p>
-<h4 align="left">3 Speed Ceiling Fans:</h4>
-<p align="left">I use the Sonoff 4Ch again flashed with the same firmware and I connected first ch to the high speed of the fan, 2nd & 3rd ch are connected to the med and low via a 6uf capacitor. The last channel is connected to the light switch again I used the gpio pin to connect the board to the wall plate, so the light can still be controlled via the wall switch. These can now be voice controlled via Alexa turn fan on/off turn fan speed to low, medium & high.</p>
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Fan%20CCT.png"/>
-<h4 align="left">Garage Door:</h4>
-<p align="left">I have an RF controlled relay connected to my garage door opener and I use the Sonoff RF Bridge to control it. I also have a Xiaomi Door Sensor to tell me whether the garage door is open. At the moment I use a Xiaomi smart switch located in the garage to control the door whilst I’m in there "Single Click" up, down and stop, "Double Click" Garage Light, Long Click manual up and down this way I can adjust how open I would like the door to be if I’m working in there. I wish to add a Bluetooth beacon to introduce geofencing to have the door open automatically when we are arriving home but atm there isn't enough room to fit the car due to my abundance of toys I no longer use.</p>
-<hr --- </hr>
-<hr --- </hr>
-
-<h3 align="left">LED Lighting</h3> 
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Logo.png" width="150"/>
-<p align="left">I have a few RGBWW strips around the house used mainly for mood lighting aswell as practical lighting on the staircase. These are all controlled by MiLight Wi-FI LED controllers with appropriate power supplies.</p>
-<hr --- </hr>
-
-| [5m RGBWW LED Strip](https://www.banggood.com/5M-RGBW-RGBWW-4-In-1-SMD5050-300LEDs-Strip-Light-Non-waterproof-Indoor-Use-DC12V-p-1155159.html?rmmds=myorder) | [LED Power](https://www.banggood.com/AC100-240V-To-DC12V-6A-72W-Power-Supply-Adapter-for-LED-Strip-Light-p-1111858.html?rmmds=myorder) | [Mi Light Wi-FI Controller](https://www.banggood.com/Mi-Light-24A-DC12-24V-2_4G-RF-4-Channel-RGB-LED-Remote-Controller-p-968820.html?rmmds=myorder) | [LED Diffuser](https://www.banggood.com/3050CM-XH-U1-U-Style-Aluminum-Channel-Holder-For-LED-Strip-Light-Bar-Under-Cabinet-Lamp-Lighting-p-1142676.html?rmmds=myorder&cur_warehouse=CN) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/LED%20Strips.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/LED%20PSU.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Mi%20Light.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/LED%20Diffuser.jpg" width="250"/> |
-
-<h4 align="left">Staircase Lighting:</h4>
-<p align="left">I have 80cm LED strips on the underside of each step installed with a LED Diffuser the steps are split by 2 Mi Light Wi-Fi controllers. I have all odd stairs on one controller and all even on the other so I can have the colours alternate when it’s a special occasion or seasonal holiday. Their standard setup is to turn on (warm white) 30mins after sundown and turn off with the activation of the bed time script. Once the bed time script kicks in the Staircase LED strips are set to turn on only during motion detection of the motion sensor at the top of the stairs, they turn off again 5 mins after last motion detection. Each alternate strip is soldered together and placed into a channel countersunk in to the step which is then covered by bamboo floor boards. The strips themselves are installed on the underside of the step overhang so they face back towards the step below it was a massive job (lots of swearing) and now all cabling is hidden it looks great and effect when stairs are light is awesome really makes the staircase a feature of the house. Each strip works out to be around 5.6m in length so I decided to power them sufficiently with 12v 6A 72W PSU.</p>
-<h4 align="left">LED Back Lighting:</h4>
-<p align="left">I purchased 3 x 5m LED strips to do the staircase mentioned above and had about 3.5m left after the project was complete so rather than let them go to waste (like they were ever going to be) I decided to place a few strips behind my PC Monitor, Media TV, Bedroom TV and Entertaining TV. Each strip is controlled by the Mi Light Wi-Fi LED controller and on normal nights they just give a soft blue glow from behind the screens. When music is playing I found a project where they had a script which would change the LED colour to match that of the Album artwork that was playing at the time. I also aim to port this across to work with Kodi and the TV Show/Movie Poster colours.</p>
-<h4 align="left">Entertainment Lighting:</h4>
-<p align="left">I have 20m festoon lighting with different sized Edison bulbs, it came with 20w bulbs (when turned on it light up not only the entertainment area but the whole suburb) I replaced them with 2-4w bulbs but I fear the damage to my retinas may be permanent. I also have 3 x 10m lengths of LED fairy lighting which run off USB 5V. To power them I use a Xiaomi Power Strip which has 3 Power and 3 USB points.</p>
-<hr --- </hr>
-<hr --- </hr>
-
-<h3 align="left">Appliances and Smart Power</h3> 
-<img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Xiaomi%20Logo.png" width="150"/>
-<p align="left">I am slowly replacing my Appliances with smarter connected devices as they need replacement, in the mean time I am installing Xiaomi ZigBee power strips and plugs to give me the ability to add them into my automations. These power switches also monitor power consumption which is an added bonus but I am yet to fully take advantage of this feature by graphing my consumption and finding out my biggest areas for saving on my bill.</p>
-<hr --- </hr>
-
-| [Xiaomi Robot Vacuum](https://www.banggood.com/Original-Xiaomi-Mi-Home-Smart-Robot-Vacuum-Cleaner-LSD-and-SLAM-1800Pa-5200mAH-with-APP-Control-p-1098131.html?rmmds=myorder&cur_warehouse=CN) | [Xiaomi Smart Mop](https://www.banggood.com/New-Arrivals-Xiaomi-Handheld-Stay-Upright-Electric-Mop-Long-Grip-Handle-Mopping-Robot-Clean-Machine-p-1171073.html?rmmds=myorder&stayold=1&cur_warehouse=CN) | [Xiaomi Wi-Fi Pedestal Fan](https://www.banggood.com/Original-Xiaomi-Mi-Smart-DC-Frequency-Electric-Stand-Fan-with-APP-Remote-Control-Natural-Wind-p-1156931.html?rmmds=search) | [Xiaomi Smart Power Switches](https://www.banggood.com/Original-Xiaomi-Mijia-Four-Digit-Individual-Control-Power-Strip-Socket-with-3-x-USB-Quick-Charge-p-1253472.html?rmmds=myorder&cur_warehouse=CN) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/RoboVac.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Smart%20Mop.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Smart%20Fan.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Smart%20Power.png" width="250"/> |
-
-<h4 align="left">RoboVac:</h4>
-<p align="left">This vacuum actually does a pretty good job of the day to day pickups of random crumbs my boys seem to generate at will. We still use the Dyson stick for a weekly clean or a big spill, but the RoboVac is set to clean twice a day and it just goes about its business we have lots of obstacles which it navigates with ease including the large dining table with 6 chairs. There is a new zone cleaning feature which I would like to take advantage of but in order to do that I would need to upgrade my app version and I'm still adding devices to HA which I lost this ability moving to newer versions of the app.</p>
-<h4 align="left">Smart Mop:</h4>
-<p align="left">This mop is not our main one as we have a steam mop for the tiled and bamboo flooring which is needed with two boys rampaging throughout the place. The thing I like about this mop is it has a built in light and is easy to whip out on those liquid spills that haven’t dried hard yet. As for smart features it really only has battery level indicators and alerts when it’s time to change over the mop pad.</p>
-
 <h4 align="left">Smart Fan:</h4>
 
 I was excited to get this fan as it was to go into the playroom for the kids the room has no windows or is quiet closed off so airflow isn't the best. When it arrived I went to integrate it with HA to realise that it is one of the few Xioami devices that didn't have auto discovery or a custom component for it. I reached out to the community and our very own @syssi had a component for me to do testing with in the matter of hours. We are actually only about 50% through this as it is waiting for me to finish testing the remainder of its functions and it will be added in future release. [Smart Pedestal Fan](https://community.home-assistant.io/t/mi-smart-pedestal-fan/49998/52).
@@ -157,21 +103,6 @@ I was excited to get this fan as it was to go into the playroom for the kids the
 <p align="left">I have chosen Samsung as my screens of choice and Kodi as the media players. I have this combo setup in my Media Room, Master Bedroom, Study and Entertainment Area. Integration into HA for Kodi is straight forward (actually I think the latest update to HA 0.69.1 introduced auto discovery for Kodi so even easier now) but I found the Samsung Smart TV component without anywhere near the amount of control I needed. I use a combo of Broadlink RM3 mini and Pulse Eight HDMI-CEC adaptors to gain the control I wanted.</p>
 <hr --- </hr>
 
-| [Samsung Smart TV](https://www.jbhifi.com.au/) | [Nuc 7th Gen Core i7](https://www.umart.com.au/Intel-NUC-BOXNUC7i7BNH-Barebone-Kit---7th-Gen-Core-i7_39118G.html) | [Broadlink RM3 Mini](https://www.banggood.com/Broadlink-Black-Bean-Smart-Home-Wifi-Remote-IR-Controller-Universal-Appliances-Smart-Control-p-1049494.html) | [Pulse Eight CEC Adaptor](https://www.pulse-eight.com/p/104/usb-hdmi-cec-adapter) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Samsung%20TV.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Nuc.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/RM3%20Mini.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Pulse%208%20CEC.png" width="250"/> |
-
-<h4 align="left">Samsung Smart TVs:</h4>
-<p align="left">As stated above the Samsung TV Component doesn't give much control at all, so I use Pulse Eight CEC Adaptor connected to the Media Nuc in conjunction with the CEC component to give me more control over the TV it also allows the family to control Kodi with the standard TV remote. The bedroom screen CEC adaptor doesn't pass all functions through so I also use a RM3 mini to get the remainder of control via IR blaster (I already have one there to control the air conditioner). Lastly I have a RPi Kodi so it has CEC natively and I can control TV and Kodi as I want there is an RM3 Mini there also for controlling the Fairy lights modes.</p>
-<h4 align="left">Kodi Hardware:</h4>
-<p align="left">- In the Media Room I run the latest 7th gen i7 Intel NUC with support for 4k playback, it has 16gb RAM and a SSD overkill for &nbsp; a Media PC but I like to have flawless playback of media files in this room.<br>
-- The Master Bedroom inherited the old Media PC which is a 5th gen i7 Intel NUC, SSD and 8gb RAM this rarely is used these &nbsp; days for media playback as the kids are still young once they learn to sleep in their own beds we should be able to use it &nbsp; &nbsp; &nbsp; &nbsp; again for that. It is used for music streaming however.<br>
-- The Entertainment Kodi is a RPi model b+ with a HiFiBerry Amp hat more than enough for outdoor entertaining or watching &nbsp; the Rugby.</p>
-<h4 align="left">Media Servers:</h4>
-<p align="left">I use a pair of Netgear 2 bay NAS drives both contain 2 x 16Tb HDD and neither has redundancy(something I plan to sort in the very near future). These serve media to all devices around the house they are nothing special the read write times are pretty horrible but they get the job done and when they dont I will look at upgrading them.</p>
-<hr --- </hr>
-<hr --- </hr>
-
 <h3 align="left">Multi Room Audio</h3> 
 
 | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/xsqeeze%20logo.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Hifi%20Berry%20Logo.png" width="150"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Yamaha%20Logo.jpg" width="150"/> |
@@ -179,10 +110,6 @@ I was excited to get this fan as it was to go into the playroom for the kids the
 
 <p align="left">I already had a bunch of media playing capable devices with speakers so I opted to take advantage of these over a dedicated multi-room music option like Sonos. I am using my Kodi devices with Logitech Squeezebox to sync audio across rooms in the house although I normally only have one room playing at a time unless we are entertaining.</p>
 <hr --- </hr>
-
-| [Logitech Squeezebox Server](https://www.mysqueezebox.com/download) | [HiFiBerry Amp2](https://www.hifiberry.com/shop/boards/hifiberry-amp2/) | [Yamaha NS-AW392 Outdoor Speakers](https://www.exeltek.com.au/yamaha-ns-aw392-black-all-weather-speakers-waterproof-bass-drivers-powder-coated-aluminium-grilles-swivel-brackets-included?gclid=Cj0KCQjwlv_XBRDrARIsAH-iRJQO8TKkjAygha50BMU-bB2xcYoKnt1uE0p4zy7zUDuVlaQiMRiqVBYaAsWKEALw_wcB) | [Yamaha NS-IC600 In Ceiling Speakers](https://www.exeltek.com.au/yamaha-ns-ic600-in-ceiling-speaker-pair) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Logitech%20Sqeezebox%20Logo.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Amp2.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Yamaha%20In%20Ceiling.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Yamaha%20Outdoor.jpg" width="250"/> |
 
 <h4 align="left">Music Server:</h4>
 <p align="left">I used to have the Logitech Squeezebox Server installed on my NAS but its functionality died a few updates back so I moved the server across to my (mostly always on) Configuration PC in the study. I am thinking of moving this to a RPi with MAX2Play need to look into this as I have a few Rpi around the house that only have Libreelc Installed. It really is a shame Logitech shelved this product as its functionality in some ways is still far superior of those in the market today. The main drawback to this setup over a dedicated system like Sonos is the hardware timing isn't there for a pure audiophile, however if you don’t have multiple groups of speakers in the same room you wouldn't notice. Walking from room to room it works well enough to carry music sync throughout the house. Spotify dropped LMS support last year but where one drops the ball the community takes over with a plugin called spotty.</p>
@@ -207,22 +134,6 @@ In this area I have a RPi Model B+ and I initially connected it to the 32" Samsu
 There are many takes on Alarm Panels in the HA Forums I decided to go with this one [MQTT Alarm Control Panel](https://community.home-assistant.io/t/mqtt-alarm-control-panel-for-raspberry-pi-and-android/26484) which utilises the HA Manual Alarm Panel component. It was really easy to setup with great detailed instructions, installed this on the recommended hardware metioned in the project.
 
 <hr --- </hr>
-
-| [MQTT Alarm Control Panel](https://www.hackster.io/thanksmister/mqtt-alarm-control-panel-for-home-assistant-a206cc) | [Raspberry Pi 3+ Touch Screen Kit](https://core-electronics.com.au/raspberry-pi-3-touch-screen-kit.html) | [Design Spark Rpi Enclosure](https://au.rs-online.com/web/p/development-board-enclosures/9064665/) | [Raspberry Pi Camera Board](https://core-electronics.com.au/raspberry-pi-camera-board-v2-8-megapixels-38552.html) |
-| --- | --- | --- | --- |
-| <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Alarm%20Panel.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Rasp%20Pi%20Touch%20Screen%20Kit.png" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/RPi%20Touch%20Screen%20Enclosure.jpg" width="250"/> | <img src="https://github.com/JamesMcCarthy79/Home-Assistant-Config/blob/master/HA%20Pics/Pi%20Camera.jpg" width="250"/> |
-
-<h4 align="left">MQTT Manual Alarm:</h4>
-<p align="left">I built the MQTT Alarm Panel as per the instructions the only things I did different was adapt a DesignSpark Touch Screen Enclosure to wall mount the Alarm Panel so it can be armed/disarmed as we come in the door. The downside to this design is you have to remove it from the wall if you ever need to access the ports (I haven’t had a need to do that yet). I also connected the RPi to a Bluetooth speaker so any sounds will be played back through it.</p>
-<h4 align="left">Alarm Modes:</h4>
-<p align="left">Arm Home<br>
-This is a kind of perimeter mode where it sets the exterior motion sensors and all door/window sensors to trigger the alarm sequence after 60 secs on motion detection and state change respectively. This mode allows us to walk about the house and frees up the indoor motion sensors to be used to trigger lights after it has been set with triggering alarm. If alarm is triggered the panel will beep every 5 secs for the first 60 secs to let you know you need to enter a valid code or it will sound the alarm, fire off TTS messages, start recording from all cameras etc. etc.<br>
-  
-Arm Away<br>
-This arms the perimeter as above but it also arms tells the indoor motions sensors they are on watchdog mode and any motion detection from them will set of the alarm sequence as above. I get notifications to my slack, email and tasker I don't have it going to our phones via sms in case we are ever in the house with the would be assassins (that’s right I have made plenty of enemies in my time).<br>
-
-Panic Mode<br>
-During normal operation the alarm panel excepts a valid 4-digit code one for my wife and one for myself (as I type this I just thought I could use this for presence :+1:need to add to to-do list). If, however, you are in the unlikely or in my case seen too many movies very likely to happen scenario where you are being held at let’s say machete point (gun control is a big deal in Australia). There is a separate panic mode 4-digit code which will let you validate the alarm off sequence on the screen however it will send a msg to alert security company of situation #machetewieldingassailantsneedhelp.<br>
 
 <h4 align="left">Cameras:</h4>
 <p align="left">Exterior<br>
