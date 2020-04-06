@@ -1,6 +1,6 @@
 resources:
 #HACS#
-  - url: /community_plugin/custom-header/custom-header.js
+  - url: /hacsfiles/custom-header/custom-header.js
     type: module
   - url: /local/community/weather-card/weather-card.js
     type: module
@@ -24,11 +24,11 @@ resources:
     type: module
   - url: /local/community/light-entity-row/light-entity-row.js
     type: js
-  - url: /community_plugin/garbage-collection-card/garbage-collection-card.js
+  - url: /hacsfiles/garbage-collection-card/garbage-collection-card.js
     type: module
-  - url: /community_plugin/button-card/button-card.js
+  - url: /hacsfiles/button-card/button-card.js
     type: module
-  - url: /community_plugin/lovelace-animated-background/animated-background.js
+  - url: /hacsfiles/lovelace-animated-background/animated-background.js
     type: module
 #LOCAL#    
   - url: /local/custom_ui/floorplan/floorplan-card.js?v=1.1.14
