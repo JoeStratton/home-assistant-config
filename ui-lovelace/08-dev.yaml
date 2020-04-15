@@ -4,7 +4,7 @@ icon: 'mdi:dev-to'
 cards:
   - entities:
       - entity: input_boolean.drunk_mode
-      - entity: input_boolean.trash_notify
+      - entity: input_boolean.garage_door_stay_open
     show_header_toggle: false
     type: entities 
     title: ''

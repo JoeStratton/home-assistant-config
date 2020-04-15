@@ -33,7 +33,7 @@ theater_shield:
   initial: off
   icon: mdi:television-play
 
-trash_notify:
-  name: Trash Day
+garage_door_stay_open:
+  name: Lock Garage Door Open
   initial: off
-  icon: mdi:trash-can-outline
+  icon: mdi:garage-open

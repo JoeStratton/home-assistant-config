@@ -68,5 +68,6 @@ badges:
   - !secret device_user1
   - !secret device_user2
   - !secret device_user3
+  - !secret device_user4
   - !secret address_sensor
   - binary_sensor.iss
