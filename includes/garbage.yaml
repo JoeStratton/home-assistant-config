@@ -16,5 +16,5 @@ sensors:
   collection_days: "mon"
   verbose_state: False
   period: 6
-  first_week: 5
+  first_week: 4
   first_month: "jan"
