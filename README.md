@@ -9,7 +9,7 @@
 </p>  
 <p>
   <img src="https://img.shields.io/github/stars/JoeStratton/home-assistant-config.svg?style=plasticr"/>
-  <img src="https://img.shields.io/badge/HA--Version-0.108.8-brightgreen.svg"/>
+  <img src="https://img.shields.io/badge/HA--Version-0.109.6-brightgreen.svg"/>
   <img src="https://img.shields.io/maintenance/yes/2020.svg"/>
   <img src="https://img.shields.io/github/commit-activity/y/JoeStratton/home-assistant-config.svg"/>
   <img src="https://img.shields.io/github/last-commit/JoeStratton/home-assistant-config.svg?style=plasticr"/>

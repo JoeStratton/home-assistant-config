@@ -48,11 +48,15 @@ alexa: !include includes/alexa.yaml
 input_boolean: !include includes/input_boolean.yaml
 modernforms: !include includes/modernforms.yaml
 garbage_collection: !include includes/garbage.yaml
+#image_processing: !include includes/image_processing.yaml
+unifiprotect: !include includes/unifiprotect.yaml
 
 map:
 sun:
 ffmpeg:
 config:
+stream:
 history:
 mobile_app:
+system_health:
 

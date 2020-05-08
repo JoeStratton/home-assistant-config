@@ -277,8 +277,8 @@ cards:
             power: true
             mute: true
             progress: true
-          min_volume: 20
-          max_volume: 80
+          min_volume: 40
+          max_volume: 100
         #party mode
       - type: conditional
         conditions:
@@ -298,7 +298,7 @@ cards:
             mute: true
             progress: true
           min_volume: 20
-          max_volume: 60
+          max_volume: 80
       - type: conditional
         conditions:
           - entity: media_player.living_room_zone2
@@ -613,13 +613,6 @@ cards:
 #          - sensor.nzbget_speed
 #          - sensor.nzbget_average_speed
 #          - sensor.nzbget_queue_size
-      - type: custom:fold-entity-row
-        head:
-          type: section
-          label: Deluge
-        items:
-          - sensor.deluge_down_speed
-          - sensor.deluge_up_speed
     show_header_toggle: false
     title: Downloads
     type: entities

@@ -1,0 +1,6 @@
+host: !secret cloud_key_ip
+username: !secret cloud_key_username
+password: !secret cloud_key_password
+port: !secret cloud_key_port
+image_width: 640
+minimum_score: 1

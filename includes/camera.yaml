@@ -1,12 +1,3 @@
-- platform: ring
-
 - platform: generic
   still_image_url: !secret radarr_url
   name: !secret radarr_name
-  
-# - platform: uvc
-  # nvr: !secret unjoe_ip
-  # port: 7080
-  # key: !secret unifi_video_api_key
-  # password: !secret unifi_camera_password
-  # ssl: false

@@ -17,16 +17,6 @@
   -  movies
   -  upcoming
   days: 7
-
-- platform: deluge
-  password: !secret deluge_password
-  host: !secret unjoe_ip
-  port: 58846
-  username: !secret joe_user
-  monitored_variables:
-  -  current_status
-  -  download_speed
-  -  upload_speed
    
 #- platform: nzbget
 #  host: !secret unjoe_ip
