@@ -55,7 +55,7 @@ map:
 sun:
 ffmpeg:
 config:
-stream:
+#stream:
 history:
 mobile_app:
 system_health:
