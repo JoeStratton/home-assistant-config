@@ -270,6 +270,7 @@ cards:
           type: custom:mini-media-player
           name: Main Zone
           entity: media_player.living_room_main
+          artwork: cover
           hide:
             name: false
             power_state: true
@@ -290,6 +291,7 @@ cards:
           type: custom:mini-media-player
           name: Main Zone
           entity: media_player.living_room_main
+          artwork: cover          
           hide:
             name: false
             power_state: true
@@ -320,6 +322,7 @@ cards:
           type: custom:mini-media-player
           name: Zone 2
           entity: media_player.living_room_zone2
+          artwork: cover
           hide:
             name: false
             power_state: false
@@ -340,6 +343,7 @@ cards:
           type: custom:mini-media-player
           name: Zone 2
           entity: media_player.living_room_zone2
+          artwork: cover
           hide:
             name: false
             power_state: false

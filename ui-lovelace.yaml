@@ -10,8 +10,6 @@ resources:
     type: js    
   - url: /local/community/simple-thermostat/simple-thermostat.js
     type: module
-  - url: /local/community/atomic_calendar/atomic-calendar.js
-    type: module 
   - url: /local/community/vertical-stack-in-card/vertical-stack-in-card.js
     type: js
   - url: /local/community/lovelace-fold-entity-row/fold-entity-row.js
@@ -28,15 +26,11 @@ resources:
     type: module
   - url: /hacsfiles/button-card/button-card.js
     type: module
+  - url: /local/commmunity/lovelace-layout-card/layout-card.js
+    type: module
 #LOCAL#    
-  - url: /local/custom_ui/floorplan/floorplan-card.js?v=1.1.14
-    type: module 
   - url: /local/custom_ui/column-card.js
     type: js
-  - url: /local/custom_ui/layout-card.js
-    type: js
-  - url: /local/custom_ui/battery-entity.js?v=0.1
-    type: module
   - url: /local/custom_ui/card-tools.js
     type: js
   - url: /local/custom_ui/custom-fan-card.js
