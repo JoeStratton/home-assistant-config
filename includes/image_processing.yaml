@@ -9,16 +9,16 @@
     # - entity_id: camera.living_room
       # name: living_room_faces
 
-- platform: deepstack_face
-  ip_address: !secret unjoe_ip
-  port: 5000
-  api_key: !secret deepstack_api
-  timeout: 10
-  detect_only: False
-  scan_interval: 20
-  source:
-    - entity_id: camera.kichen
-      name: kitchen_faces
+# - platform: deepstack_face
+  # ip_address: !secret unjoe_ip
+  # port: 5000
+  # api_key: !secret deepstack_api
+  # timeout: 10
+  # detect_only: False
+  # scan_interval: 20
+  # source:
+    # - entity_id: camera.kichen
+      # name: kitchen_faces
 
 # - platform: deepstack_face
   # ip_address: !secret unjoe_ip

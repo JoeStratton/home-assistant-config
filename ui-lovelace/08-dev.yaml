@@ -10,7 +10,7 @@ cards:
     title: ''
   - entities:
      #- entity: image_processing.living_room_faces
-     - entity: image_processing.kitchen_faces
+     #- entity: image_processing.kitchen_faces
      #- entity: image_processing.front_room_faces
      #- entity: image_processing.office_faces
      #- entity: image_processing.pathway_faces
