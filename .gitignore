@@ -6,7 +6,7 @@ videos
 custom_scripts
 .google.token
 .ring_cache.pickle
-alexa_media.j123ss@gmail.com.pickle
+alexa_media.*.pickle
 google_calendars.yaml
 home-assistant.log
 home-assistant_v2.db*
