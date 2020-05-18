@@ -5,7 +5,14 @@ import voluptuous as vol
 from datetime import timedelta
 
 import homeassistant.helpers.config_validation as cv
-from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+
+try:
+    from homeassistant.components.switch import SwitchEntity as SwitchDevice
+except ImportError:
+    # Prior to HA v0.110
+    from homeassistant.components.switch import SwitchDevice
+
+from homeassistant.components.switch import PLATFORM_SCHEMA
 from homeassistant.const import (
     ATTR_ATTRIBUTION,
     ATTR_FRIENDLY_NAME,
@@ -105,10 +112,12 @@ class UnifiProtectSwitch(SwitchDevice):
         self._camera_type = self._camera["type"]
         self._attr = SWITCH_TYPES.get(switch_type)[2]
         self._switch_type = SWITCH_TYPES.get(switch_type)[2]
-        _LOGGER.debug("UnifiProtectSwitch: %s created", self._name)
-        _LOGGER.debug(
-            "UnifiProtectSwitch: IR_ON %s IR_OFF %s", self._ir_on_cmd, self._ir_off_cmd
-        )
+        _LOGGER.debug(f"UNIFIPROTECT SWITCH CREATED: {self._name}")
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return self._unique_id
 
     @property
     def should_poll(self):

@@ -26,7 +26,7 @@ resources:
     type: module
   - url: /hacsfiles/button-card/button-card.js
     type: module
-  - url: /local/commmunity/lovelace-layout-card/layout-card.js
+  - url: /hacsfiles/lovelace-layout-card/layout-card.js
     type: module
 #LOCAL#    
   - url: /local/custom_ui/column-card.js
