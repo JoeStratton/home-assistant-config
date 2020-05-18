@@ -1,7 +1,7 @@
 .storage
 deps
 tts
-.august.conf
+*.august.conf
 videos
 custom_scripts
 .google.token
