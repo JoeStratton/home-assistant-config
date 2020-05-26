@@ -56,7 +56,7 @@ cards:
         type: picture-glance
     type: vertical-stack
 badges:
-  - sun.sun
+  #- sun.sun
   - !secret device_user1
   - !secret device_user2
   - !secret device_user3

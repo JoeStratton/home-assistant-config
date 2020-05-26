@@ -72,3 +72,5 @@ midnight:
   table-row-background-color: "#353840"
   text-primary-color: "var(--primary-text-color)"
   toggle-button-color: "var(--primary-color)"
+  #cards
+  #ha-card-border-radius: 20px
