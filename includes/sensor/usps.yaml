@@ -1,2 +1,0 @@
-username: !secret joes_email
-password: !secret usps_password

@@ -1,0 +1,81 @@
+- alias: 'Watch Living Room TV'
+  id: 'living_room_tv_on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.living_room_shield
+      to: 'on'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.living_room_tv_power
+    - service: media_player.turn_on
+      data:
+        entity_id: 
+          - media_player.living_room_shield
+          - media_player.living_room_main
+    - service: media_player.volume_set
+      entity_id: media_player.living_room_main
+      data:
+        volume_level: 0.60
+    - service: media_player.select_source
+      entity_id: media_player.living_room_main
+      data:
+        source: hdmi1
+    - service: media_player.select_source
+      entity_id: media_player.living_room_shield
+      data:
+        source: Plex
+
+- alias: 'Turn Off Living Room TV'
+  id: 'living_room_tv_off'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.living_room_shield
+      to: 'off'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.living_room_tv_power
+    - service: media_player.turn_off
+      data:
+        entity_id: 
+          - media_player.living_room_shield
+          - media_player.living_room_main
+      
+# - alias: 'Listen to Living Room Music'
+  # id: 'living_room_music_on'
+  # trigger:
+    # - platform: state
+      # entity_id: input_boolean.living_room_shield
+      # to: 'on'
+  # action:
+    # - service: media_player.turn_on
+      # entity_id: media_player.living_room_main
+    # - service: media_player.volume_set
+      # entity_id: media_player.living_room_main
+      # data:
+        # volume_level: 0.50
+    # - service: media_player.select_source
+      # entity_id: media_player.living_room_main
+      # data:
+        # source: bluetooth
+    # - service: media_player.volume_set
+      # entity_id: media_player.living_room_zone2
+      # data:
+        # volume_level: 0.70
+    # - service: media_player.select_source
+      # entity_id: media_player.living_room_zone2
+      # data:
+        # source: bluetooth
+
+# - alias: 'Turn Off Living Room Music'
+  # id: 'living_room_music_off'
+  # trigger:
+    # - platform: state
+      # entity_id: input_boolean.living_room_music
+      # to: 'off'
+  # action:
+    # - service: media_player.turn_off
+      # entity_id: media_player.living_room_main
+    # - service: media_player.turn_off
+      # entity_id: media_player.living_room_zone2
+    # - service: switch.turn_off
+      # entity_id: switch.living_room_tv_power

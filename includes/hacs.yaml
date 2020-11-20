@@ -1,3 +1,0 @@
-token: !secret hacs_token
-sidepanel_title: "HACS"
-sidepanel_icon: "mdi:alpha-c-box"

@@ -9,6 +9,12 @@ cards:
       - entity: cover.garage_door
     show_header_toggle: false
     type: entities
+  - camera_image: camera.front_door
+    entities: 
+      - binary_sensor.doorbell_front_door
+      - binary_sensor.motion_front_door
+    title: Front Door
+    type: picture-glance
   - type: vertical-stack
     cards:
       - type: 'custom:garbage-collection-card'
@@ -41,12 +47,6 @@ cards:
       - entity: binary_sensor.upstairs_thermostat_fan
         name: Fan
         icon: 'mdi:fan'   
-  - camera_image: camera.front_door
-    entities:
-      - binary_sensor.front_door_motion
-      - binary_sensor.front_door_ding
-    title: Front Door
-    type: picture-glance
   - cards:
       - entity: weather.dark_sky
         type: 'custom:weather-card'
@@ -56,10 +56,9 @@ cards:
         type: picture-glance
     type: vertical-stack
 badges:
-  #- sun.sun
-  - !secret device_user1
-  - !secret device_user2
-  - !secret device_user3
-  - !secret device_user4
+  - !secret user1_person
+  - !secret user2_person
+  - !secret user3_person
+  - !secret user4_person
   - !secret address_sensor
   - binary_sensor.iss

@@ -1,0 +1,10 @@
+#- platform: xiaomi_miio
+#  host: !secret bedroom_humidifier_ip
+#  name: Bedroom Humidifier
+#  token: !secret xiaomi_miio_token
+#  model: zhimi.humidifier.cb1
+- platform: xiaomi_miio_airpurifier
+  name: Bedroom Humidifier
+  host: !secret bedroom_humidifier_ip
+  token: !secret xiaomi_miio_token
+  #model: zhimi.humidifier.v1

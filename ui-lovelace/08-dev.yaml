@@ -1,6 +1,9 @@
 title: Dev
 path: dev
 icon: 'mdi:dev-to'
+visible: 
+  - user: !secret user1_id
+  - user: !secret user3_id
 cards:
   - entities:
       - entity: input_boolean.drunk_mode
@@ -8,15 +11,15 @@ cards:
     show_header_toggle: false
     type: entities 
     title: ''
-  - entities:
-     #- entity: image_processing.living_room_faces
-     #- entity: image_processing.kitchen_faces
-     #- entity: image_processing.front_room_faces
-     #- entity: image_processing.office_faces
-     #- entity: image_processing.pathway_faces
-    show_header_toggle: false
-    type: entities 
-    title: Facial Recognition
+  # - entities:
+     # - entity: image_processing.living_room_faces
+     # - entity: image_processing.kitchen_faces
+     # - entity: image_processing.front_room_faces
+     # - entity: image_processing.office_faces
+     # - entity: image_processing.pathway_faces
+    # show_header_toggle: false
+    # type: entities 
+    # title: Facial Recognition
   - entities:
       - entity: switch.camera_uvc_g3_backyard
         name: Backyard
@@ -40,12 +43,11 @@ cards:
 #      - entity: sensor.office_sensor
 #      - entity: sensor.kitchen_sensor 
 #      - entity: sensor.alexa_media_player
-      - entity: sensor.haaska
+#      - entity: sensor.haaska
       - entity: sensor.hacs
 #      - entity: sensor.home_assistant
-      - entity: sensor.lovelace_floorplan
-      - entity: sensor.ring_alarm_mqtt
-      - entity: sensor.tautulli
+#      - entity: sensor.lovelace_floorplan
+#      - entity: sensor.ring_mqtt
     show_header_toggle: false
     title: 'Dev'
     type: entities

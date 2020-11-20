@@ -6,55 +6,53 @@ homeassistant:
   unit_system: imperial
   time_zone: !secret tz
   auth_mfa_modules:
-    - type: totp
-  auth_providers:
-    - type: homeassistant     
+    - type: totp 
   customize: !include includes/customize.yaml  
 
 frontend:
-  javascript_version: latest
   themes: !include_dir_merge_named themes
 
 http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - ::1
+    - !secret unjoe_ip
+    - !secret proxy_ip
 
-customizer:
-  custom_ui: local
-
-lovelace: !include includes/lovelace.yaml
+alexa: !include includes/alexa.yaml
+alexa_media: !include includes/alexa_media.yaml
+august: !include includes/august.yaml
+automation: !include_dir_merge_list includes/automations/
+binary_sensor: !include includes/binary_sensor.yaml
+camera: !include includes/camera.yaml
+climate: !include includes/climate.yaml
+fan: !include includes/fan.yaml
+garbage_collection: !include includes/garbage.yaml
 group: !include includes/groups.yaml
-zone: !include includes/zones.yaml
+input_boolean: !include includes/input_boolean.yaml
+light: !include includes/light.yaml
+lovelace: !include includes/lovelace.yaml
+media_player: !include includes/media_player.yaml
+modernforms: !include includes/modernforms.yaml
+mqtt: !include includes/mqtt.yaml
+nest: !include includes/nest.yaml
+notify: !include includes/notify.yaml
+person: !include includes/person.yaml
+tplink: !include includes/tplink.yaml
+weather: !include includes/weather.yaml
 sensor: !include_dir_merge_list includes/sensor/
 switch: !include_dir_merge_list includes/switch/
-cover: !include includes/cover.yaml
-weather: !include includes/weather.yaml
-camera: !include includes/camera.yaml
-tts: !include includes/tts.yaml
-media_player: !include includes/media_player.yaml
-notify: !include includes/notify.yaml
-binary_sensor: !include includes/binary_sensor.yaml
-climate: !include includes/climate.yaml
-tplink: !include includes/tplink.yaml
-hue: !include includes/hue.yaml
-august: !include includes/august.yaml
-nest: !include includes/nest.yaml
-light: !include includes/light.yaml
-alexa_media: !include includes/alexa_media.yaml
-mqtt: !include includes/mqtt.yaml
-hacs: !include includes/hacs.yaml
-alexa: !include includes/alexa.yaml
-input_boolean: !include includes/input_boolean.yaml
-modernforms: !include includes/modernforms.yaml
-garbage_collection: !include includes/garbage.yaml
-unifiprotect: !include includes/unifiprotect.yaml
-image_processing: !include includes/image_processing.yaml
+timer: !include includes/timer.yaml
+zone: !include includes/zones.yaml
 
-map:
-sun:
-ffmpeg:
+api:
 config:
-history:
+ffmpeg:
+map:
 mobile_app:
+stream:
+sun:
 system_health:
-

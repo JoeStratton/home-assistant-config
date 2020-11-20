@@ -3,30 +3,10 @@ drunk_mode:
   initial: off
   icon: mdi:glass-cocktail
   
-living_room_lights:
-  name: Living Room Lights
-  initial: off
-  icon: mdi:lightbulb-on-outline
-  
-living_room_music:
-  name: Living Room Music
-  initial: off
-  icon: mdi:music-note-bluetooth
-  
 living_room_shield:
   name: Living Room Shield
   initial: off
   icon: mdi:television-play
-  
-theater_lights:
-  name: Theater Lights
-  initial: off
-  icon: mdi:lightbulb-on-outline
-  
-theater_music:
-  name: Theater Music
-  initial: off
-  icon: mdi:music-note-bluetooth
   
 theater_shield:
   name: Theater Shield

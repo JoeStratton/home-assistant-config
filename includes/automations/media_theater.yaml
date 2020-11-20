@@ -1,0 +1,45 @@
+- alias: 'Turn on Theater'
+  id: 'theater_on'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.theater_shield
+      to: 'on'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.theater_projector
+    - service: media_player.turn_on
+      data:
+        entity_id: 
+          - media_player.theater_shield
+          - media_player.theatre_room_main
+    - service: media_player.volume_set
+      entity_id: media_player.theatre_room_main
+      data:
+        volume_level: 0.70
+    - service: media_player.select_source
+      entity_id: media_player.theatre_room_main
+      data:
+        source: hdm1
+    - service: media_player.select_source
+      entity_id: media_player.theater_shield
+      data:
+        source: Plex
+    - service: light.turn_off
+      entity_id: light.stairs
+
+- alias: 'Turn Off Theater'
+  id: 'theater_off'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.theater_shield
+      to: 'off'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.theater_projector
+    - service: media_player.turn_off
+      data:
+        entity_id: 
+          - media_player.theater_shield
+          - media_player.theatre_room_main
+    - service: light.turn_on
+      entity_id: light.stairs

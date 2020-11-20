@@ -1,0 +1,61 @@
+- alias: 'Turn on Pantry Light When Door is Opened'
+  id: 'pantry_light_on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.pantry_door, binary_sensor.garage_door
+      to: 'on'
+  action:
+    - service: light.turn_on 
+      entity_id: light.pantry
+    - service: timer.start
+      data:
+        entity_id: timer.pantry      
+
+- alias: 'Turn off Pantry Light When Door is Closed'
+  id: 'pantry_light_off'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.pantry_door, binary_sensor.garage_door
+      to: 'off'
+    - platform: state
+      entity_id: timer.pantry
+      to: 'idle'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.garage_door
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.pantry_door
+      state: 'off'
+    - condition: state
+      entity_id: timer.pantry
+      state: 'idle'
+  action:
+    service: light.turn_off
+    entity_id: light.pantry
+
+- alias: 'Night Lights'
+  id: 'nightlights_on'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "00:30:00"
+  action:
+    service: light.turn_on 
+    data:
+      entity_id: 
+        - light.front_room_lamp_1
+        - light.hanging_light
+
+- alias: 'Night Lights Off'
+  id: 'nightlights_off'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:00:00"
+  action:
+    service: light.turn_off 
+    data:
+      entity_id: 
+        - light.front_room_lamp_1
+        - light.hanging_light

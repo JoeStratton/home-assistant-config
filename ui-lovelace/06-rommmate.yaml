@@ -1,6 +1,9 @@
 title: !secret user3
 path: !secret user3_lower
 icon: 'mdi:home-floor-b'
+visible: 
+  - user: !secret user1_id
+  - user: !secret user3_id
 cards:
   - entities:
      - entity: !secret roommate_light
@@ -9,11 +12,11 @@ cards:
     type: entities    
   - entities:
       - type: custom:fold-entity-row
-        head: light.hue_color_lamp_1
+        head: light.lamp
         label: 'Hue Lamp'
         entities:
           - type: custom:light-entity-row
-            entity: light.hue_color_lamp_1
+            entity: light.lamp
             name: ' '
             showColorSliders: true
       - type: custom:fold-entity-row

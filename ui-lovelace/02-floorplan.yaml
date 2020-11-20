@@ -10,9 +10,6 @@ cards:
         items:
           - light.front_room_lamp_1
           - light.front_room_lamp_2
-#          - type: 'custom:slider-entity-row'
-#            entity: light.chandelier
-#            full_row: false
         open: true
       - type: custom:fold-entity-row
         head:

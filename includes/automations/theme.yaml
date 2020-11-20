@@ -1,0 +1,10 @@
+#Sets the theme to midnight for everyone if they have backend-selected set in their user profile
+- alias: 'Set theme at startup'
+  id: 'set_theme_on_startup'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: midnight

@@ -5,16 +5,19 @@ sensors:
   - mon
   exclude_dates:
   - '2020-12-25'
+  expire_after: '12:00'
+  
 - name: Recycle # Each week on Monday. No collection on Christmas
   frequency: "weekly"
   collection_days:
   - mon
   exclude_dates:
   - '2020-12-25'
+  expire_after: '12:00'
+  
 - name: Bulk
   frequency: "every-n-weeks"
   collection_days: "mon"
   verbose_state: False
   period: 6
-  first_week: 4
-  first_month: "jan"
+  first_week: 3

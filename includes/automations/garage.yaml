@@ -1,0 +1,24 @@
+- alias: Notify apps when the garage door opens
+  trigger:
+    platform: state
+    entity_id: cover.garage_door
+    to: 'open'
+    for: '00:30:00'
+  action:
+    - service: !secret user1_notify
+      data:
+        message: "The garage has been left open"
+        data:
+          actions:
+            - action: "close_garage" # The key you are sending for the event
+              title: "Close Garage Door" # The button title
+
+- alias: Close the garage when notification action is tapped
+  trigger:
+    platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: close_garage
+  action:
+    service: cover.close_cover
+    entity_id: cover.garage_door

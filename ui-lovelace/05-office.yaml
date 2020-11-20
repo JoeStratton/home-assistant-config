@@ -1,6 +1,8 @@
 1title: Office
 path: office
 icon: 'mdi:office-building'
+visible: 
+  - user: !secret user1_id
 cards:
   - entities:
      - entity: light.office

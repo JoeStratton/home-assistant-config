@@ -3,7 +3,7 @@ path: cameras
 icon: 'mdi:cctv'
 cards:
   - type: alarm-panel
-    entity: alarm_control_panel.ring_alarm
+    entity: alarm_control_panel.gilbert_alarm
     name: Ring Alarm
   - type: vertical-stack
     cards:

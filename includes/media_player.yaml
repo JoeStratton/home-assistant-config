@@ -6,18 +6,27 @@
   host: !secret receiver2_ip
   port: 5005
   
+# - platform: musiccast_yamaha
+  # host: !secret receiver1_ip
+  # port: 5006
+  
+# - platform: musiccast_yamaha
+  # host: !secret receiver2_ip
+  # port: 5005
+  
 - platform: androidtv
   name: Theater Shield
   device_class: androidtv
   host: !secret theater_shield_ip
   turn_on_command: "input keyevent KEYCODE_WAKEUP"
   turn_off_command: "input keyevent KEYCODE_SLEEP"
-  apps:
-    com.google.android.youtube.tv: "Youtube"
-    com.plexapp.android: "Plex"
-  get_sources: false
-  adb_server_ip: !secret unjoe_ip
-  adb_server_port: 5037
+  exclude_unnamed_apps: true
+  # apps:
+    # com.google.android.youtube.tv: "Youtube"
+    # com.plexapp.android: "Plex"
+  # get_sources: false
+  # adb_server_ip5037: !secret unjoe_ip
+  # adb_server_port: 
   
 - platform: androidtv
   name: Living Room Shield
@@ -25,10 +34,11 @@
   host: !secret living_room_shield_ip
   turn_on_command: "input keyevent KEYCODE_WAKEUP"
   turn_off_command: "input keyevent KEYCODE_SLEEP"
-  apps:
-    com.google.android.youtube.tv: "Youtube"
-    com.plexapp.android: "Plex"
-  get_sources: false
-  adb_server_ip: !secret unjoe_ip
-  adb_server_port: 5037
+  exclude_unnamed_apps: true
+  # apps:
+    # com.google.android.youtube.tv: "Youtube"
+    # com.plexapp.android: "Plex"
+  # get_sources: false
+  # adb_server_ip: !secret unjoe_ip
+  # adb_server_port: 5037
   

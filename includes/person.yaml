@@ -1,0 +1,22 @@
+- name: !secret user1
+  id: j19so5
+  user_id: !secret user1_id
+  device_trackers:
+    - !secret device_user1
+    
+- name: !secret user2
+  id: k19do745
+  user_id: !secret user2_id
+  device_trackers:
+    - !secret device_user2
+   
+- name: !secret user3
+  id: b192ds
+  device_trackers:
+    - !secret device_user3
+ 
+- name: !secret user4
+  id: j19sxxc
+  user_id: !secret user4_id
+  device_trackers:
+    - !secret device_user4

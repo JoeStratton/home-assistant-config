@@ -1,55 +1,29 @@
 title: Media
 background: var(--background-image)
-icon: mdi:library-video
+icon: mdi:play-box-multiple
 path: media
 cards:
   - type: custom:vertical-stack-in-card
     cards:
       - entities:
           - entity: input_boolean.theater_shield
-          - entity: input_boolean.theater_music
-          - entity: input_boolean.theater_lights
         show_header_toggle: false
         type: entities 
         title: 'Theater'
-        #non party mode
-      - type: conditional
-        conditions:
-          - entity: media_player.theatre_room_main
-            state_not: "off"
-          - entity: input_boolean.drunk_mode
-            state: "off"
-        card:
-          type: custom:mini-media-player
-          entity: media_player.theatre_room_main
-          hide:
-            name: true
-            power_state: true
-            icon: true
-            power: true
-            mute: true
-            progress: true    
-          min_volume: 20
-          max_volume: 100
-        #party mode
-      - type: conditional
-        conditions:
-          - entity: media_player.theatre_room_main
-            state_not: "off"
-          - entity: input_boolean.drunk_mode
-            state: "on"
-        card:
-          type: custom:mini-media-player
-          entity: media_player.theatre_room_main
-          hide:
-            name: true
-            power_state: true
-            icon: true
-            power: true
-            mute: true
-            progress: true    
-          min_volume: 20
-          max_volume: 70
+      - type: custom:mini-media-player
+        entity: media_player.theatre_room_main
+        name: Theater Sound
+        artwork: cover
+        hide:
+          name: false
+          power_state: true
+          icon: true
+          power: false
+          mute: true
+          progress: true
+          controls: true
+        min_volume: 20
+        max_volume: 100
   - type: conditional
     conditions:
       - entity: media_player.theater_shield
@@ -254,105 +228,41 @@ cards:
     cards:
       - entities:
           - entity: input_boolean.living_room_shield
-          - entity: input_boolean.living_room_music
-          - entity: input_boolean.living_room_lights
         show_header_toggle: false
         type: entities 
         title: 'Living Room'
-        #non party mode
-      - type: conditional
-        conditions:
-          - entity: media_player.living_room_main
-            state_not: "off"
-          - entity: input_boolean.drunk_mode
-            state: "off"
-        card:
-          type: custom:mini-media-player
-          name: Main Zone
-          entity: media_player.living_room_main
-          artwork: cover
-          hide:
-            name: false
-            power_state: true
-            icon: true
-            power: true
-            mute: true
-            progress: true
-          min_volume: 40
-          max_volume: 100
-        #party mode
-      - type: conditional
-        conditions:
-          - entity: media_player.living_room_main
-            state_not: "off"
-          - entity: input_boolean.drunk_mode
-            state: "on"
-        card:
-          type: custom:mini-media-player
-          name: Main Zone
-          entity: media_player.living_room_main
-          artwork: cover          
-          hide:
-            name: false
-            power_state: true
-            icon: true
-            power: true
-            mute: true
-            progress: true
-          min_volume: 20
-          max_volume: 80
-      - type: conditional
-        conditions:
-          - entity: media_player.living_room_zone2
-            state: "off"
-        card:
-          type: custom:mini-media-player
-          entity: media_player.living_room_zone2
-          name: Zone 2
-          hide:
-            icon: true 
-        #non party mode            
-      - type: conditional
-        conditions:
-          - entity: media_player.living_room_zone2
-            state_not: "off"
-          - entity: input_boolean.drunk_mode
-            state: "off"
-        card:
-          type: custom:mini-media-player
-          name: Zone 2
-          entity: media_player.living_room_zone2
-          artwork: cover
-          hide:
-            name: false
-            power_state: false
-            icon: true
-            power: false
-            mute: true
-            progress: true
-          min_volume: 50
-          max_volume: 100
-        #party mode
-      - type: conditional
-        conditions:
-          - entity: media_player.living_room_zone2
-            state_not: "off"
-          - entity: input_boolean.drunk_mode
-            state: "on"
-        card:
-          type: custom:mini-media-player
-          name: Zone 2
-          entity: media_player.living_room_zone2
-          artwork: cover
-          hide:
-            name: false
-            power_state: false
-            icon: true
-            power: false
-            mute: true
-            progress: true
-          min_volume: 50
-          max_volume: 90
+      - type: custom:mini-media-player
+        name: Main Zone
+        entity: media_player.living_room_main
+        artwork: cover
+        source: bluetooth
+        hide:
+          icon: true
+          controls: true
+        min_volume: 10
+        max_volume: 100
+        # group: true
+        # speaker_group:
+          # platform: musiccast_yamaha
+          # show_group_count: true
+          # expanded: false
+          # sync_volume: true
+          # entities:
+            # - entity_id: media_player.living_room_main
+              # name: Living Room
+            # - entity_id: media_player.living_room_zone2
+              # name: Zone 2
+      - type: custom:mini-media-player
+        name: Zone 2
+        entity: media_player.living_room_zone2
+        artwork: cover
+        source: main_sync
+        hide:
+          icon: true
+          source: true
+          controls: true
+        min_volume: 0
+        max_volume: 100
   - type: conditional
     conditions:
       - entity: media_player.living_room_shield
@@ -383,6 +293,7 @@ cards:
           cards:
             - type: entity-button
               icon: mdi:power
+              color: rgb(255, 255, 255)
               name: "ON"
               entity: media_player.living_room_shield
               hold_action: none
@@ -553,70 +464,4 @@ cards:
                   border: solid 3px rgba(118,185,0,1);
                   box-shadow: 3px 3px rgba(0,0,0,0.4);
                 }      
-  # - type: custom:vertical-stack-in-card
-    # cards:
-      # - entities:
-          # - type: 'custom:button-entity-row'
-            # buttons:
-              # - entity: switch.bedroom_tv_power
-                # icon: 'mdi:power'
-                # style:
-                 # - color: var(--primary-color)
-              # - entity: switch.bedroom_tv_volume_up
-                # icon: 'mdi:volume-plus'
-                # style:
-                  # - color: var(--primary-color)
-              # - entity: switch.bedroom_tv_volume_down
-                # icon: 'mdi:volume-minus'
-                # style:
-                  # - color: var(--primary-color)
-        # show_header_toggle: false
-        # type: entities 
-        # title: 'Bedroom'
-  - entities:
-      - type: custom:fold-entity-row
-        head:
-          type: section
-          label: New On Plex
-        items:
-          - type: custom:upcoming-media-card
-            entity: sensor.plex_recently_added
-            title: ''
-            image_style: fanart
-            hide_empty: true
-      - type: custom:fold-entity-row
-        head:
-          type: section
-          label: Sonarr
-        items:
-          - sensor.sonarr_upcoming
-          - sensor.sonarr_wanted
-          - sensor.sonarr_queue
-          - type: custom:upcoming-media-card
-            entity: sensor.sonarr_upcoming_media
-            title: ''
-            image_style: fanart
-            hide_empty: true
-      - type: custom:fold-entity-row
-        head:
-          type: section
-          label: Radarr
-        items:
-          - sensor.radarr_upcoming
-          - sensor.radarr_movies
-          - type: custom:upcoming-media-card
-            entity: sensor.radarr_upcoming_media
-            title: ''
-            image_style: fanart
-            hide_empty: true
-#      - type: custom:fold-entity-row
-#        head:
-#          type: section
-#          label: NZBGet
-#        items:
-#          - sensor.nzbget_speed
-#          - sensor.nzbget_average_speed
-#          - sensor.nzbget_queue_size
-    show_header_toggle: false
-    title: Downloads
-    type: entities
+                

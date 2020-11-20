@@ -13,4 +13,49 @@ cards:
       <li>Alexa, Turn On Downstairs TV</li><br/>
       <li>Alexa, Turn On Music</li><br/>
       <li>Alexa, Turn Off Office Lights</li></ul>
-     
+  - type: entities
+    show_header_toggle: false
+    title: 'Intercom - DO NOT ABUSE'
+    entities:
+      - type: custom:mini-media-player
+        artwork: full-cover
+        name: Speak to Kitchen
+        icon: mdi:fridge-outline
+        entity: media_player.kitchen_echo_dot
+        hide:
+              power_state: true
+              power: true
+              volume: true
+              controls: true
+              source: true
+        tts:
+          platform: alexa
+          entity_id: media_player.kitchen_echo_dot
+      - type: custom:mini-media-player
+        artwork: full-cover
+        name: Speak to Joe
+        icon: mdi:office-building
+        entity: media_player.joe_s_office_echo_dot
+        hide:
+              power_state: true
+              power: true
+              volume: true
+              controls: true
+              source: true
+        tts:
+          platform: alexa
+          entity_id: media_player.joe_s_office_echo_dot
+      - type: custom:mini-media-player
+        artwork: full-cover
+        name: Speak to Bedroom
+        icon: mdi:bed
+        entity: media_player.bedroom_echo_dot
+        hide:
+              power_state: true
+              power: true
+              volume: true
+              controls: true
+              source: true
+        tts:
+          platform: alexa
+          entity_id: media_player.bedroom_echo_dot
