@@ -12,6 +12,4 @@ google_calendars.yaml
 home-assistant.log
 home-assistant_v2.db*
 secrets.yaml
-www/community/
-custom_components/*
-!custom_components/modernforms
+ip_bans.yaml
