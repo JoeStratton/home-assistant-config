@@ -1,9 +1,10 @@
+*~
+**/__pycache_
 .storage
 .vscode
 deps
 tts
 *.august.conf
-custom_scripts
 .google.token
 .ring_cache.pickle
 alexa_media.*.pickle
@@ -11,6 +12,6 @@ google_calendars.yaml
 home-assistant.log
 home-assistant_v2.db*
 secrets.yaml
-**/__pycache__
 www/community/
-*~
+custom_components/
+!custom_components/modernforms
